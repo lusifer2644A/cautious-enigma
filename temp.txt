@@ -1,0 +1,2 @@
+heading headingColor2
+sub-heading-2 font-normal headingColor
