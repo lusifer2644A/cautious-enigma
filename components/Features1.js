@@ -200,9 +200,9 @@ const Features1 = () => {
           </h3>
 
           <div className="points flex flex-col gap-5 mt-10">
-            {items[curr_slide].points.map((it) => {
+            {items[curr_slide].points.map((it, idx) => {
               return (
-                <div className="flex flex-row gap-5 items-center">
+                <div className="flex flex-row gap-5 items-center" key={idx}>
                   <span className="w-10 h-10 flex justify-center items-center bg-[#ffffff] rounded-lg">
                     <img
                       className="w-4/5 h-4/5 object-contain"
@@ -242,6 +242,7 @@ const Features1 = () => {
                 onClick={() => {
                   setCurrSlide(index);
                 }}
+                key={index}
               >
                 {index + 1}
               </span>
