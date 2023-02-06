@@ -159,7 +159,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Goglocal site</title>
+        <title>Goglocal</title>
         <meta name="description" content="Goglocal site" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
