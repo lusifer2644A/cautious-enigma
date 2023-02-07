@@ -79,7 +79,7 @@
   }
 
   .page-container {
-    @apply rounded-[3rem] w-full sm:w-[90%] max-w-[1600px] h-full min-h-[30rem] bg-white w-full lg:w-[95%] xl:w-[90%];
+    @apply rounded-[3rem] w-full sm:w-[95%] max-w-[1800px] h-full min-h-[30rem] bg-white w-full lg:w-[95%] xl:w-[95%];
   }
 
   .image_background_gradient {
@@ -107,6 +107,17 @@
     );
     mix-blend-mode: overlay;
     /* filter: blur(85.1714px); */
+  }
+
+  .product_box1 {
+    background: linear-gradient(
+      180deg,
+      rgba(40, 29, 48, 0.94) 0%,
+      #281d30 100%
+    );
+    border-radius: 109px;
+    color: white !important;
+    box-shadow: 0 5px 0 10px #c2c2c2;
   }
 
   /* ------------OLD------------------ */
