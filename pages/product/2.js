@@ -1,31 +1,13 @@
 import Image from "next/future/image";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import React from "react";
 
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
-const Button = ({ children, path = "/" }) => {
-  return (
-    <div
-      className="rounded-[12px] border-[1.02px]   text-center border-[1px] border-[#401255] dark:border-[#BE5EEA] max-w-[300px]"
-      style={{
-        background:
-          "linear-gradient(161.65deg, rgba(136, 0, 220, 0.63) -42.78%, rgba(177, 120, 120, 0) 113.86%)",
-      }}
-    >
-      {/* <Link href={path}> */}
-      <div
-        className="text-[#401255] dark:text-[#fff] px-4  py-3 "
-        style={{ font: "500 16px 'Poppins', sans-serif" }}
-      >
-        {children}
-      </div>
-      {/* </Link> */}
-    </div>
-  );
-};
 export default function Index() {
+  const router = useRouter();
   const data = {
     title: " Glocal Check-in  & Check-out",
     subTitle: "Making it super-easy to sell",
@@ -61,7 +43,7 @@ export default function Index() {
         img: "p2_004.svg",
         fields: [
           {
-            title: "Accurate Landed Cost With Rariff,Duty & Shipping",
+            title: "Accurate Landed Cost With Rariff, Duty & Shipping",
             link: null,
           },
         ],
@@ -135,7 +117,7 @@ export default function Index() {
                 />
               </div>
               <div className="w-full max-w-lg">
-                <div className="headingColor w-full text-left font-body body-2 ">
+                <div className="headingColor w-full text-left font-body body-2 font-noto">
                   {data.cta}
                 </div>
               </div>
@@ -168,45 +150,54 @@ export default function Index() {
             <div className="main-heading2 headingColor2 text-justify md:text-center  max-w-6xl mx-auto pt-20 ">
               Global Check-In & Check-out Features
             </div>
-            <div className="flex flex-row flex-wrap gap-8 justify-center py-10">
-              {data.features.map((feat) => {
-                return (
-                  <div className="flex flex-col items-center justify-start w-[80%] max-w-[360px] min-h-[500px] px-5 py-10 bg-gradient-to-b from-[#1D1125F2] to-[#1D1125F2] rounded-2xl">
-                    <div className="w-full">
-                      <div className="w-60 h-60 my-5 flex items-center justify-center mx-auto relative">
-                        <div className="w-full h-full rounded-full border-[0.5px] border-[#D96C72] dark:border-[#E21D6438] flex items-center justify-center">
-                          <div className="w-[95%] h-[95%] rounded-full border-[2px] border-[#D96C72] dark:border-[#E21D6438] flex items-center justify-center">
-                            <div className="w-[95%] h-[95%] rounded-full border-[4px] border-[#FFB0B5] dark:border-[#E21D6438]">
-                              <Image
-                                className="w-full h-full object-contain"
-                                src={`${data.imageBasePath}/${feat.img}`}
-                                alt="hero image"
-                                loading="lazy"
-                                width="200"
-                                height="400"
-                                // objectFit="cover"
-                              />
+            <div className="flex justify-center">
+              <div className="flex flex-row flex-wrap gap-8 justify-center py-10 max-w-[1500px]">
+                {data.features.map((feat) => {
+                  return (
+                    <div className="flex flex-col shadow-xl items-center justify-start w-[80%] max-w-[400px] min-h-[500px] px-5 py-10 bg-gradient-to-b from-[#1D1125F2] to-[#1D1125F2] rounded-2xl">
+                      <div className="w-full">
+                        <div className="w-60 h-60 my-5 flex items-center justify-center mx-auto relative">
+                          <div className="w-full h-full rounded-full border-[0.5px] border-[#D96C72] dark:border-[#E21D6438] flex items-center justify-center">
+                            <div className="w-[95%] h-[95%] rounded-full border-[2px] border-[#D96C72] dark:border-[#E21D6438] flex items-center justify-center">
+                              <div className="w-[95%] h-[95%] rounded-full border-[4px] border-[#FFB0B5] dark:border-[#E21D6438]">
+                                <Image
+                                  className="w-full h-full object-contain"
+                                  src={`${data.imageBasePath}/${feat.img}`}
+                                  alt="hero image"
+                                  loading="lazy"
+                                  width="200"
+                                  height="400"
+                                  // objectFit="cover"
+                                />
+                              </div>
                             </div>
                           </div>
+                          <div className="image_background_gradient3"></div>
                         </div>
-                        <div className="image_background_gradient3"></div>
+                      </div>
+                      <div className="heading-4 leading-snug heading-color text-center mt-5">
+                        {feat.name}
+                      </div>
+                      <div className="flex flex-col gap-3 justify-center items-center mt-10 w-[70%]">
+                        {feat.fields.map((field) => {
+                          return field.link ? (
+                            <div
+                              className="w-full bg-[#FFFFFF] caption-text text-[#401255] rounded-2xl px-4 py-3 text-center font-medium cursor-pointer"
+                              onClick={() => router.push(field.link)}
+                            >
+                              {field.title}
+                            </div>
+                          ) : (
+                            <div className="w-full bg-[#FFFFFF] caption-text text-[#401255] rounded-2xl px-4 py-3 text-center font-medium">
+                              {field.title}
+                            </div>
+                          );
+                        })}
                       </div>
                     </div>
-                    <div className="heading-4 leading-snug heading-color text-center">
-                      {feat.name}
-                    </div>
-                    <div className="flex flex-col gap-3 justify-center items-center mt-5">
-                      {feat.fields.map((field) => {
-                        return (
-                          <div className="w-full bg-[#FFFFFF] caption-text text-[#401255] rounded-2xl px-2 py-3 text-center font-medium">
-                            {field.title}
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
             {/* Footers */}
             <div className="pt-0">
