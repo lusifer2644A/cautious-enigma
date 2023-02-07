@@ -120,6 +120,17 @@
     box-shadow: 0 5px 0 10px #c2c2c2;
   }
 
+  .product_box2 {
+    background: linear-gradient(
+      180deg,
+      rgba(40, 29, 48, 0.94) 0%,
+      #281d30 100%
+    );
+    border-radius: 109px;
+    color: white !important;
+    box-shadow: 0 5px 0 10px #c2c2c2;
+  }
+
   /* ------------OLD------------------ */
   .headerBackground {
     @apply bg-white dark:bg-black;

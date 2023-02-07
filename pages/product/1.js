@@ -16,7 +16,7 @@ export default function Index() {
     features: [
       {
         name: "Enabling Global e-commerce",
-        img: "p2_002.svg",
+        img: "p_002.svg",
         fields: [
           {
             title: "Global Expansion Strategy",
@@ -34,7 +34,7 @@ export default function Index() {
       },
       {
         name: " Get access to the World",
-        img: "p2_003.svg",
+        img: "p_003.svg",
         fields: [
           {
             title: "Marketplace Connect",
@@ -44,7 +44,7 @@ export default function Index() {
       },
       {
         name: "Stress free international order fulfillment",
-        img: "p2_004.svg",
+        img: "p_004.svg",
         fields: [
           {
             title: "International Shipping",
@@ -58,7 +58,7 @@ export default function Index() {
       },
       {
         name: "Optimised international business growth",
-        img: "p2_005.svg",
+        img: "p_005.svg",
         fields: [
           {
             title: "Global Payments",
@@ -72,7 +72,7 @@ export default function Index() {
       },
       {
         name: "Develop world-wide wholesale business",
-        img: "p2_006.svg",
+        img: "p_006.svg",
         fields: [
           {
             title: "B2B Sourcing",
