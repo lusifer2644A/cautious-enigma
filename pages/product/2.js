@@ -152,9 +152,12 @@ export default function Index() {
             </div>
             <div className="flex justify-center">
               <div className="flex flex-row flex-wrap gap-8 justify-center py-10 max-w-[1500px]">
-                {data.features.map((feat) => {
+                {data.features.map((feat, idx) => {
                   return (
-                    <div className="flex flex-col shadow-xl items-center justify-start w-[80%] max-w-[400px] min-h-[500px] px-5 py-10 bg-gradient-to-b from-[#1D1125F2] to-[#1D1125F2] rounded-2xl">
+                    <div
+                      key={`product_${idx}`}
+                      className="flex flex-col shadow-xl items-center justify-start w-[80%] max-w-[400px] min-h-[500px] px-5 py-10 bg-gradient-to-b from-[#1D1125F2] to-[#1D1125F2] rounded-2xl"
+                    >
                       <div className="w-full">
                         <div className="w-60 h-60 my-5 flex items-center justify-center mx-auto relative">
                           <div className="w-full h-full rounded-full border-[0.5px] border-[#D96C72] dark:border-[#E21D6438] flex items-center justify-center">
@@ -179,9 +182,10 @@ export default function Index() {
                         {feat.name}
                       </div>
                       <div className="flex flex-col gap-3 justify-center items-center mt-10 w-[70%]">
-                        {feat.fields.map((field) => {
+                        {feat.fields.map((field, f_idx) => {
                           return field.link ? (
                             <div
+                              key={`field_${idx}`}
                               className="w-full bg-[#FFFFFF] caption-text text-[#401255] rounded-2xl px-4 py-3 text-center font-medium cursor-pointer"
                               onClick={() => router.push(field.link)}
                             >
