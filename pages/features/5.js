@@ -11,120 +11,137 @@ export default function index() {
     iconBasePath: "/asset/feature/features/icons/",
     subHeading: "International Shipping",
     image: "05-00.png",
-    title: "Drop. Ship. Sell.",
-    subTitle:
-      "Looking for low capital and fast ways to deliver worldwide ?       ",
+    title: "Pack. Store. Deliver.",
+    subTitle: "International Shipping",
+    heroQues: "Looking to deliver your products across the world hassle-free?",
     description:
-      "Enable your business with our International Shipping Ticket  to enter any new global market at light speed with lowest investments. Our robust fulfilment network ensures your business gets the much deserved access to global selling.       ",
-    serviceTitle:
-      "Get started quickly on international sales and delivery with",
-    serviceTitleBold: "goGlocal Dropship Ticket",
+      "Empower your business with our goGlocal Fulfilment Machine to optimise your cross border deliveries and local warehousing. Our smart fulfilment and export compliant packaging ensures you and your customers are always happy with efficient international deliveries and returns.",
+    serviceTitle: "Integrate with the best-in-class shipping networks with",
+    serviceTitleBold: "goGLOCAL Fulfilment machine",
     link: "/connect/seller",
     list: [
       {
         id: 1,
         image: "05-01.svg",
-        title: "Efficient deliveries         ",
+        title: "Instant SETUP",
         description:
-          "Improve conversions with fast-shipping tags on your checkout pages of the  marketplaces          ",
+          "Enjoy a powerful courier network and global warehouse with instant access to pre-negotiated rates & services",
       },
       {
         id: 2,
         image: "05-02.svg",
-        title: "Easy Integration",
+        title: "OMNI CHANNEL",
         description:
-          "Scale globally at lowest costs and risks with minimal inventory investment",
+          "Have an agile and flexible international supply chain with wide range of products to offer",
       },
       {
         id: 3,
         image: "05-03.svg",
-        title: "Omni Channel",
+        title: "SIMPLIFIED SHIPPING",
         description:
-          "Have an agile and flexible international supply chain with wide range of products to offer           ",
+          "Ensure best delivery to customers and easy  returns while managing your entire shipping operation from one platform",
       },
     ],
   };
 
-  const BigFeatureButton = ({ text, link }) => {
-    return (
-      <Link href={data.link}>
-        <div className="px-2 w-40 py-2 accent-grad  rounded-lg cursor-pointer text-center">
-          <p className="body-3 text-black">{text}</p>
-        </div>
-      </Link>
-    );
-  };
   return (
-    <div className="main">
-      <div className=" ">
-        <Header />
-      </div>
-      <div className="container pt-60 md:px-8">
-        <h2 className="heading headingColor2 text-center">{data.title}</h2>
-        <h1 className="subtitle headingColor text-center">{data.subHeading}</h1>
-        <div className="grid-2x2">
-          <div className="md:w-6/12 flex flex-col gap-4">
-            <h1 className="sub-heading-2 headingColor-2 text-left">
-              {data.subTitle}
-            </h1>
-            <h1 className="body-2 headingColor text-justify">
-              {data.description}
-            </h1>
-          </div>
-          <div className="md:w-6/12 relative">
-            <Image
-              className="h-full w-full mx-auto p-8 "
-              src={`${data.imageBasePath}${data.image}`}
-              alt="hero image"
-              loading="lazy"
-              width="1000"
-              height="1000"
-              // objectFit="cover"
-            />
-            <div className="m-12 main-grad absolute top-8 right-8 h-2/4 w-2/4 " />
-          </div>
-        </div>
-      </div>
+    <>
+      <main className="bg-light dark:bg-dark overflow-x-hidden">
+        {/* Header */}
 
-      <div className="container">
-        <div>
-          <h1 className="heading-2 headingColor text-center md:leading-relaxed mx-auto">
-            <span className="font-normal">{data.serviceTitle}</span> <br />
-            <span className="font-bold">{data.serviceTitleBold}</span>
-          </h1>
-        </div>
-        <div className="grid-3x3 gap-20 pt-20 px-4 items-start">
-          {data.list.map((item, index) => (
-            <div key={index}>
-              <div className="flex flex-col items-center gap-4 px-4">
-                <div>
-                  <Image
-                    className="h-full w-full mx-auto "
-                    src={`${data.iconBasePath}${item.image}`}
-                    alt="hero image"
-                    loading="lazy"
-                    width="1000"
-                    height="1000"
-                    // objectFit="cover"
-                  />
-                </div>
-                <div className="sub-heading-2 sub-heading-3 headingColor uppercase">
-                  {item.title}
-                </div>
-                <div className="body-3 headingColor text-justify">
-                  {item.description}
+        <Header />
+        <div className="absolute top-0 left-0 white-rad-grad md:w-[3000px] md:h-[1200px] -translate-x-1/2 -translate-y-1/2 z-[1]"></div>
+
+        <div className="page-bg bg-[#AC2EED29] z-[10] static">
+          <div className="page-container main ">
+            {/* Hero Section */}
+            <div className="flex flex-col gap-[20px] items-center justify-center px-5 py-10 pt-32">
+              <div className="main-heading heading-color2 text-justify md:text-center mx-auto  ">
+                {data.title}
+              </div>
+              <div>
+                <div className="subtitle leading-relax text-center max-w-5xl">
+                  {data.subTitle}
                 </div>
               </div>
             </div>
-          ))}
+
+            <div className="flex justify-center py-6">
+              <div className="flex flex-row flex-wrap w-full gap-16 items-center mt-10 w-fit">
+                <div className="flex flex-col gap-5">
+                  <div className="heading-2 heading-color2  max-w-xl">
+                    {data.heroQues}
+                  </div>
+                  <div className="subtitle max-w-lg font-noto">
+                    {data.description}
+                  </div>
+                </div>
+                <div className="relative flex items-center justify-center ">
+                  <Image
+                    className="w-60 md:w-96 h-full z-10"
+                    src={`${data.imageBasePath}${data.image}`}
+                    alt="hero image"
+                    loading="lazy"
+                    width="200"
+                    height="400"
+                    // objectFit="cover"
+                  />
+                  <div className="image_background_gradient2 z-9"></div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div className="body-intro-text text-[#463C4B] text-justify md:text-center mx-auto mt-20">
+                {data.serviceTitle}
+              </div>{" "}
+              <div className="heading-3 heading-color2 text-justify md:text-center mx-auto  ">
+                {data.serviceTitleBold}
+              </div>
+            </div>
+            <div className="flex flex-col justify-center items-center">
+              <div className="flex flex-row gap-16 pt-20 px-4 items-start">
+                {data.list.map((item, index) => (
+                  <div
+                    className="flex flex-col items-center gap-4 px-4"
+                    key={index}
+                  >
+                    <div className="w-24 h-24">
+                      <Image
+                        className="h-full w-full object-contain "
+                        src={`${data.iconBasePath}${item.image}`}
+                        alt="hero image"
+                        loading="lazy"
+                        width="1000"
+                        height="1000"
+                        // objectFit="cover"
+                      />
+                    </div>
+                    <div className="heading-4 heading-color2 font-semibold uppercase">
+                      {item.title}
+                    </div>
+                    <div className="subtitle max-w-xs text-center">
+                      {item.description}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <button
+                className="btn-primary mt-10 mb-20"
+                onClick={() => router.push(link)}
+              >
+                Get in touch
+              </button>
+            </div>
+
+            {/* Footers */}
+            <div className="pt-0">
+              <Footer />
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="container pb-20">
-        <div className="flex  items-center justify-center ">
-          <BigFeatureButton text="Get in touch" link={data.link} />
-        </div>
-      </div>
-      <Footer />
-    </div>
+      </main>
+    </>
   );
 }

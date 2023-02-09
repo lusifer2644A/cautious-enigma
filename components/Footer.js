@@ -49,7 +49,7 @@ export default function Footer() {
 
   return (
     <div className="">
-      <div className="bg-[#1d1125] px-6 md:px-12 rounded-[2rem]">
+      <div className="bg-[#1d1125] px-6 md:px-12 rounded-b-[2rem]">
         <ScrollButton />
         <footer className="pt-8 md:pt-20">
           <div className=" mx-auto ">

@@ -12,7 +12,8 @@ export default function index() {
     subHeading: "Marketplace Connect",
     image: "03-00.png",
     title: "Connect. Sell. Grow.",
-    subTitle: "Want to catalyse your business with new customer acquisition?",
+    subTitle: "Marketplace Connect",
+    heroQues: "Want to catalyse your business with new customer acquisition?",
     description:
       "Plug-in to a huge pool of new customers from around the globe with our Marketplace Connect. Our platform enables you to sell your products to anyone, anywhere, anytime. Supercharge your ecommerce sales with our channel partners and analytical tools.",
     serviceTitle: "Access to unlimited business with",
@@ -24,105 +25,123 @@ export default function index() {
         image: "03-01.svg",
         title: "Dynamic Listings",
         description:
-          "Develop marketplace specific curated product offerings with analytics  to maximise sales           ",
+          "Develop marketplace specific curated product offerings with analytics  to maximise sales",
       },
       {
         id: 2,
         image: "03-02.svg",
         title: "Access the World",
         description:
-          "No more guesswork on where to find  new business channels   with exposure to customers from across the world           ",
+          "No more guesswork on where to find  new business channels   with exposure to customers from across the world",
       },
       {
         id: 3,
         image: "03-03.svg",
-        title: "Swift Entry",
+        title: "AUTOMATED WORKFLOWS  ",
         description:
-          "Plug into the new sales channels most suitable for your brand and start selling with minimal investments          ",
+          "Plug into the new sales channels most suitable for your brand and start selling with minimal investments ",
       },
     ],
   };
 
-  const BigFeatureButton = ({ text, link }) => {
-    return (
-      <Link href={data.link}>
-        <div className="px-2 w-40 py-2 accent-grad  rounded-lg cursor-pointer text-center">
-          <p className="body-3 text-black">{text}</p>
-        </div>
-      </Link>
-    );
-  };
   return (
-    <div className="main">
-      <div className=" ">
-        <Header />
-      </div>
-      <div className="container pt-60 md:px-8">
-        <h2 className="heading headingColor2 text-center">{data.title}</h2>
-        <h1 className="subtitle headingColor text-center">{data.subHeading}</h1>
-        <div className="grid-2x2">
-          <div className="md:w-6/12 flex flex-col gap-4">
-            <h1 className="sub-heading-2 headingColor-2 text-left">
-              {data.subTitle}
-            </h1>
-            <h1 className="body-2 headingColor text-justify">
-              {data.description}
-            </h1>
-          </div>
-          <div className="md:w-6/12 relative">
-            <Image
-              className="h-full w-full mx-auto p-8 "
-              src={`${data.imageBasePath}${data.image}`}
-              alt="hero image"
-              loading="lazy"
-              width="1000"
-              height="1000"
-              // objectFit="cover"
-            />
-            <div className="m-12 main-grad absolute top-8 right-8 h-2/4 w-2/4 " />
-          </div>
-        </div>
-      </div>
+    <>
+      <main className="bg-light dark:bg-dark overflow-x-hidden">
+        {/* Header */}
 
-      <div className="container">
-        <div>
-          <h1 className="heading-2 headingColor text-center md:leading-relaxed mx-auto">
-            <span className="font-normal">{data.serviceTitle}</span> <br />
-            <span className="font-bold">{data.serviceTitleBold}</span>
-          </h1>
-        </div>
-        <div className="grid-3x3 gap-20 pt-20 px-4 items-start">
-          {data.list.map((item, index) => (
-            <div key={index}>
-              <div className="flex flex-col items-center gap-4 px-4">
-                <div>
-                  <Image
-                    className="h-full w-full mx-auto "
-                    src={`${data.iconBasePath}${item.image}`}
-                    alt="hero image"
-                    loading="lazy"
-                    width="1000"
-                    height="1000"
-                    // objectFit="cover"
-                  />
-                </div>
-                <div className="sub-heading-2 sub-heading-3 headingColor uppercase">
-                  {item.title}
-                </div>
-                <div className="body-3 headingColor text-justify">
-                  {item.description}
+        <Header />
+        <div className="absolute top-0 left-0 white-rad-grad md:w-[3000px] md:h-[1200px] -translate-x-1/2 -translate-y-1/2 z-[1]"></div>
+
+        <div className="page-bg bg-[#AC2EED29] z-[10] static">
+          <div className="page-container main ">
+            {/* Hero Section */}
+            <div className="flex flex-col gap-[20px] items-center justify-center px-5 py-10 pt-32">
+              <div className="main-heading heading-color2 text-justify md:text-center mx-auto  ">
+                {data.title}
+              </div>
+              <div>
+                <div className="subtitle leading-relax text-center max-w-5xl">
+                  {data.subTitle}
                 </div>
               </div>
             </div>
-          ))}
+
+            <div className="flex justify-center py-6">
+              <div className="flex flex-row flex-wrap w-full gap-16 items-center mt-10 w-fit">
+                <div className="flex flex-col gap-5">
+                  <div className="heading-2 heading-color2  max-w-xl">
+                    {data.heroQues}
+                  </div>
+                  <div className="subtitle max-w-lg font-noto">
+                    {data.description}
+                  </div>
+                </div>
+                <div className="relative flex items-center justify-center ">
+                  <Image
+                    className="w-60 md:w-96 h-full z-10"
+                    src={`${data.imageBasePath}${data.image}`}
+                    alt="hero image"
+                    loading="lazy"
+                    width="200"
+                    height="400"
+                    // objectFit="cover"
+                  />
+                  <div className="image_background_gradient2 z-9"></div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div className="body-intro-text text-[#463C4B] text-justify md:text-center mx-auto mt-20">
+                {data.serviceTitle}
+              </div>{" "}
+              <div className="heading-3 heading-color2 text-justify md:text-center mx-auto  ">
+                {data.serviceTitleBold}
+              </div>
+            </div>
+            <div className="flex flex-col justify-center items-center">
+              <div className="flex flex-row gap-16 pt-20 px-4 items-start">
+                {data.list.map((item, index) => (
+                  <div
+                    className="flex flex-col items-center gap-4 px-4"
+                    key={index}
+                  >
+                    <div className="w-24 h-24">
+                      <Image
+                        className="h-full w-full object-contain "
+                        src={`${data.iconBasePath}${item.image}`}
+                        alt="hero image"
+                        loading="lazy"
+                        width="1000"
+                        height="1000"
+                        // objectFit="cover"
+                      />
+                    </div>
+                    <div className="heading-4 heading-color2 font-semibold uppercase">
+                      {item.title}
+                    </div>
+                    <div className="subtitle max-w-xs text-center">
+                      {item.description}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <button
+                className="btn-primary mt-10 mb-20"
+                onClick={() => router.push(link)}
+              >
+                Get in touch
+              </button>
+            </div>
+
+            {/* Footers */}
+            <div className="pt-0">
+              <Footer />
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="container pb-20">
-        <div className="flex  items-center justify-center ">
-          <BigFeatureButton text="Get in touch" link={data.link} />
-        </div>
-      </div>
-      <Footer />
-    </div>
+      </main>
+    </>
   );
 }
