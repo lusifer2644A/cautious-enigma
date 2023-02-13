@@ -212,10 +212,13 @@ export default function careers() {
             </div>
             <div className="h-[600px] flex flex-row items-center justify-center gap-2">
               <div className="grid grid-cols-[1fr_0.5fr] gap-y-2 gap-x-5">
-                {rocketData.map((p) => {
+                {rocketData.map((p, idx) => {
                   return (
                     <>
-                      <motion.div className="medium-text max-w-[555px] text-end my-auto">
+                      <motion.div
+                        className="medium-text max-w-[555px] text-end my-auto"
+                        key={idx}
+                      >
                         {p.title}
                       </motion.div>
                       <div className="h-16 w-full flex flex-row items-center justify-end mx-auto gap-0">
@@ -264,8 +267,8 @@ export default function careers() {
                   "Reliability",
                   "Hustle",
                   "Audacity",
-                ].map((d) => {
-                  return <CareerButton2 text={d} />;
+                ].map((d, idx) => {
+                  return <CareerButton2 text={d} key={idx} />;
                 })}
               </div>
             </div>
@@ -276,9 +279,12 @@ export default function careers() {
             </div>
             <div className="flex flex-row items-center justify-center gap-2 mt-10 pb-5">
               <div className="flex flex-row flex-wrap justify-center gap-10 px-5">
-                {whatsInIt.map((d) => {
+                {whatsInIt.map((d, idx) => {
                   return (
-                    <div className=" min-h-[25rem] group relative bg-[#1D1125]  py-4 px-4 rounded-xl w-[20rem]">
+                    <div
+                      className=" min-h-[25rem] group relative bg-[#1D1125]  py-4 px-4 rounded-xl w-[20rem]"
+                      key={idx}
+                    >
                       <div className="flex flex-col items-center gap-4   ">
                         <div className="h-52 w-full group-hover:opacity-0">
                           <Image
@@ -320,8 +326,8 @@ export default function careers() {
               </button>
               <div className="max-w-6xl flex flex-row flex-wrap justify-center gap-y-12 gap-x-10 mt-5">
                 {["Business", "Performance", "Logistics", "Technology"].map(
-                  (d) => {
-                    return <CareerButton2 text={d} />;
+                  (d, idx) => {
+                    return <CareerButton2 text={d} key={idx} />;
                   }
                 )}
               </div>
@@ -338,9 +344,12 @@ export default function careers() {
               </div>
               <div className="flex justify-center items-center py-6">
                 <div className="flex flex-row flex-wrap justify-center w-full gap-8 items-center mt-10 w-fit">
-                  {selection_data.map((d) => {
+                  {selection_data.map((d, idx) => {
                     return (
-                      <div className="w-full max-w-[600px] h-auto grid grid-cols-[1fr_0.7fr] gap-5 justify-center p-5 bg-[#ffffff] shadow-lg rounded-lg">
+                      <div
+                        className="w-full max-w-[600px] h-auto grid grid-cols-[1fr_0.7fr] gap-5 justify-center p-5 bg-[#ffffff] shadow-lg rounded-lg"
+                        key={idx}
+                      >
                         <div className="flex flex-col gap-3">
                           <div className="heading-2 text-[#2F1B58]">
                             {d.title}
