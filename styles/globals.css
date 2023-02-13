@@ -116,6 +116,13 @@
     padding-bottom: 0;
     display: flex;
     justify-content: center;
+    background-color: #ac2eed29;
+  }
+
+  .main-grad {
+    background: rgba(136, 14, 212, 0.382);
+    mix-blend-mode: normal;
+    filter: blur(73.9263px);
   }
 
   .main-grad2 {
@@ -128,8 +135,24 @@
     opacity: 0.7;
   }
 
+  .pr_rad_grad {
+    background: linear-gradient(
+      180deg,
+      #ac77c5 0%,
+      #55027d 17.5%,
+      #500176 39.9%,
+      #42035f 58.65%,
+      #55116a 74.79%,
+      #864285 100%
+    );
+  }
+
+  .main-light-background {
+    background: #f9e9ff;
+  }
+
   .page-container {
-    @apply rounded-[3rem] w-full sm:w-[95%] max-w-[1800px] h-full min-h-[30rem] bg-white w-full lg:w-[95%] xl:w-[95%];
+    @apply rounded-[2rem] w-full sm:w-[95%] max-w-[1800px] h-full min-h-[30rem] bg-white w-full lg:w-[95%] xl:w-[95%];
   }
 
   .image_background_gradient {
@@ -175,11 +198,20 @@
   }
 
   .product_box2 {
-    background: linear-gradient(
-      180deg,
-      rgba(40, 29, 48, 0.94) 0%,
-      #281d30 100%
-    );
+    background: radial-gradient(
+        100.1% 100.1% at 50.01% 133.89%,
+        rgba(180, 97, 79, 0.5) 0%,
+        rgba(180, 97, 79, 0) 100%
+      ),
+      radial-gradient(
+        254.69% 143.38% at 50.05% -18.17%,
+        #53007b 0%,
+        #ba8bd0 14.58%,
+        #580282 27.78%,
+        #3f005e 46.92%,
+        #540e75 68.8%,
+        #c797de 100%
+      );
     border-radius: 109px;
     color: white !important;
     box-shadow: 0 5px 0 10px #c2c2c2;

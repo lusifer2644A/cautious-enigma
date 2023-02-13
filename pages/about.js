@@ -153,17 +153,17 @@ export default function Home() {
               </motion.div>
             </div>
 
-            <div className="bg-gradient-to-b from-[#1d1125eb] to-[#1d1125f2] px-12 py-5 rounded-[2rem]">
+            <motion.div className="main-light-background px-12 py-5 rounded-[0rem]">
               <div className="md:pt-8 px-8">
                 <motion.div
                   initial={{ opacity: 0, y: 100 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 1.2 }}
-                  className="flex flex-col  md:flex-row items-center  gap-8 justify-around mx-auto "
+                  className="flex flex-col  md:flex-row items-center  gap-8 justify-center mx-auto "
                 >
                   <div className="md:w-1/2">
-                    <p className="subtitle text-[#ffffff] text-justify ">
-                      <ul class="list-disc subtitle text-[#ffffff] dark:text-white max-w-xl font-noto">
+                    <p className="subtitle heading-color22 text-justify ">
+                      <ul class="list-disc subtitle heading-color22 dark:text-white max-w-xl font-noto">
                         <li>
                           Solving core global trade problems faced by business
                           across sizes and geographies.
@@ -191,7 +191,7 @@ export default function Home() {
                 </motion.div>
               </div>
 
-              <div className="heading-1 heading-color text-center pt-40">
+              <div className="heading-1 heading-color22 text-center pt-40">
                 {data.why_we_exist.title}
               </div>
               <div className="flex flex-row gap-2 justify-center items-center">
@@ -203,10 +203,10 @@ export default function Home() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path d="M47.0103 0.65332H0" stroke="#ffffff" />
+                    <path d="M47.0103 0.65332H0" stroke="#1d1125" />
                   </svg>
                 </div>
-                <div className="heading-4 heading-color font-normal text-center py-4">
+                <div className="heading-4 heading-color22 font-normal text-center py-4">
                   <span> Solving the big how </span>
                 </div>
                 <div>
@@ -217,16 +217,16 @@ export default function Home() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path d="M47.0103 0.65332H0" stroke="#ffffff" />
+                    <path d="M47.0103 0.65332H0" stroke="#1d1125" />
                   </svg>
                 </div>
               </div>
 
-              <div className="heading-4 heading-color font-light italic tracking-wide font-bold max-w-2xl mx-auto text-center  py-12">
+              <div className="heading-4 heading-color22 font-light italic tracking-wide font-bold max-w-2xl mx-auto text-center  py-12">
                 {data.why_we_exist.subTitle}
               </div>
               <div className="md:pt-8">
-                <div className="flex flex-col  md:flex-row items-center gap-4  justify-between mx-auto ">
+                <div className="flex flex-col  md:flex-row items-center gap-4  justify-center mx-auto ">
                   <div className="md:w-4/12 relative">
                     <div className=" mx-auto ">
                       <Image
@@ -242,9 +242,9 @@ export default function Home() {
                       {/* <div className="main-grad hidden lg:block dark:hidden absolute top-0 right-0 h-full w-full"></div> */}
                     </div>
                   </div>
-                  <div className="md:w-8/12">
+                  <div className="md:w-fit">
                     <div className="flex flex-col  items-start justify-center gap-4">
-                      <div className="flex flex-row gap-2 items-center justify-center text-justify heading-5 font-normal font-noto heading-color">
+                      <div className="flex flex-row gap-2 items-center justify-center text-justify heading-5 font-normal font-noto heading-color22">
                         <p>
                           <svg
                             width="33"
@@ -252,10 +252,12 @@ export default function Home() {
                             viewBox="0 0 33 32"
                             className="svg-fill"
                             xmlns="http://www.w3.org/2000/svg"
+                            fill="#1d1125"
                           >
                             <path
                               fill-rule="evenodd"
                               clip-rule="evenodd"
+                              fill="#1d1125"
                               d="M16.1729 31.5974C25.0046 31.5974 32.1641 24.5949 32.1641 15.9569C32.1641 7.31889 25.0046 0.316406 16.1729 0.316406C7.34116 0.316406 0.181641 7.31889 0.181641 15.9569C0.181641 24.5949 7.34116 31.5974 16.1729 31.5974ZM15.7338 19.7262L21.9365 13.47L20.6436 12.1882L15.062 17.818L11.6759 14.6654L10.4354 15.9978L14.4671 19.7515L15.1127 20.3526L15.7338 19.7262Z"
                             />
                           </svg>
@@ -268,7 +270,7 @@ export default function Home() {
                           </span>
                         </p>
                       </div>
-                      <div className="flex flex-row gap-2 items-center justify-center heading-5 font-normal font-noto heading-color text-justify ">
+                      <div className="flex flex-row gap-2 items-center justify-center heading-5 font-normal font-noto heading-color2 text-justify ">
                         <p>
                           <svg
                             width="33"
@@ -280,6 +282,7 @@ export default function Home() {
                             <path
                               fill-rule="evenodd"
                               clip-rule="evenodd"
+                              fill="#1d1125"
                               d="M16.1729 31.5974C25.0046 31.5974 32.1641 24.5949 32.1641 15.9569C32.1641 7.31889 25.0046 0.316406 16.1729 0.316406C7.34116 0.316406 0.181641 7.31889 0.181641 15.9569C0.181641 24.5949 7.34116 31.5974 16.1729 31.5974ZM15.7338 19.7262L21.9365 13.47L20.6436 12.1882L15.062 17.818L11.6759 14.6654L10.4354 15.9978L14.4671 19.7515L15.1127 20.3526L15.7338 19.7262Z"
                             />
                           </svg>
@@ -292,7 +295,7 @@ export default function Home() {
                           low investment.
                         </p>
                       </div>{" "}
-                      <div className="flex flex-row gap-2 items-center justify-center heading-5 font-normal font-noto heading-color text-justify">
+                      <div className="flex flex-row gap-2 items-center justify-center heading-5 font-normal font-noto heading-color2 text-justify">
                         <p>
                           <svg
                             width="33"
@@ -304,6 +307,7 @@ export default function Home() {
                             <path
                               fill-rule="evenodd"
                               clip-rule="evenodd"
+                              fill="#1d1125"
                               d="M16.1729 31.5974C25.0046 31.5974 32.1641 24.5949 32.1641 15.9569C32.1641 7.31889 25.0046 0.316406 16.1729 0.316406C7.34116 0.316406 0.181641 7.31889 0.181641 15.9569C0.181641 24.5949 7.34116 31.5974 16.1729 31.5974ZM15.7338 19.7262L21.9365 13.47L20.6436 12.1882L15.062 17.818L11.6759 14.6654L10.4354 15.9978L14.4671 19.7515L15.1127 20.3526L15.7338 19.7262Z"
                             />
                           </svg>
@@ -318,7 +322,7 @@ export default function Home() {
                           </span>
                         </p>
                       </div>{" "}
-                      <div className="flex flex-row gap-2 items-center justify-center heading-5 font-normal font-noto heading-color text-justify">
+                      <div className="flex flex-row gap-2 items-center justify-center heading-5 font-normal font-noto heading-color2 text-justify">
                         <p>
                           <svg
                             width="33"
@@ -330,6 +334,7 @@ export default function Home() {
                             <path
                               fill-rule="evenodd"
                               clip-rule="evenodd"
+                              fill="#1d1125"
                               d="M16.1729 31.5974C25.0046 31.5974 32.1641 24.5949 32.1641 15.9569C32.1641 7.31889 25.0046 0.316406 16.1729 0.316406C7.34116 0.316406 0.181641 7.31889 0.181641 15.9569C0.181641 24.5949 7.34116 31.5974 16.1729 31.5974ZM15.7338 19.7262L21.9365 13.47L20.6436 12.1882L15.062 17.818L11.6759 14.6654L10.4354 15.9978L14.4671 19.7515L15.1127 20.3526L15.7338 19.7262Z"
                             />
                           </svg>
@@ -341,7 +346,7 @@ export default function Home() {
                           {"  "} and customs.
                         </p>
                       </div>{" "}
-                      <div className="flex flex-row gap-2 items-center justify-center heading-5 font-normal font-noto heading-color text-justify">
+                      <div className="flex flex-row gap-2 items-center justify-center heading-5 font-normal font-noto heading-color2 text-justify">
                         <p>
                           <svg
                             width="33"
@@ -353,6 +358,7 @@ export default function Home() {
                             <path
                               fill-rule="evenodd"
                               clip-rule="evenodd"
+                              fill="#1d1125"
                               d="M16.1729 31.5974C25.0046 31.5974 32.1641 24.5949 32.1641 15.9569C32.1641 7.31889 25.0046 0.316406 16.1729 0.316406C7.34116 0.316406 0.181641 7.31889 0.181641 15.9569C0.181641 24.5949 7.34116 31.5974 16.1729 31.5974ZM15.7338 19.7262L21.9365 13.47L20.6436 12.1882L15.062 17.818L11.6759 14.6654L10.4354 15.9978L14.4671 19.7515L15.1127 20.3526L15.7338 19.7262Z"
                             />
                           </svg>
@@ -367,7 +373,7 @@ export default function Home() {
                           <span className="font-bold"> FX rate.</span>
                         </p>
                       </div>{" "}
-                      <div className="flex flex-row gap-2 items-center justify-center heading-5 font-normal font-noto heading-color text-justify">
+                      <div className="flex flex-row gap-2 items-center justify-center heading-5 font-normal font-noto heading-color2 text-justify">
                         <p>
                           <svg
                             width="33"
@@ -379,6 +385,7 @@ export default function Home() {
                             <path
                               fill-rule="evenodd"
                               clip-rule="evenodd"
+                              fill="#1d1125"
                               d="M16.1729 31.5974C25.0046 31.5974 32.1641 24.5949 32.1641 15.9569C32.1641 7.31889 25.0046 0.316406 16.1729 0.316406C7.34116 0.316406 0.181641 7.31889 0.181641 15.9569C0.181641 24.5949 7.34116 31.5974 16.1729 31.5974ZM15.7338 19.7262L21.9365 13.47L20.6436 12.1882L15.062 17.818L11.6759 14.6654L10.4354 15.9978L14.4671 19.7515L15.1127 20.3526L15.7338 19.7262Z"
                             />
                           </svg>
@@ -400,17 +407,17 @@ export default function Home() {
               {/* Who we are  */}
 
               <div className=" px-5 md:px-10 pt-20 md:pt-60 ">
-                <div className="heading-1 heading-color text-center ">
+                <div className="heading-1 heading-color2 text-center ">
                   {data.who_we_are.title}
                 </div>
 
-                <div className="heading-4 heading-color font-light italic tracking-wide font-bold max-w-2xl mx-auto text-center  py-12">
+                <div className="heading-4 heading-color2 font-light italic tracking-wide font-bold max-w-2xl mx-auto text-center  py-12">
                   {data.who_we_are.subTitle}
                 </div>
                 <div className="md:pt-8">
-                  <div className="flex flex-col  md:flex-row items-center justify-around mx-auto ">
+                  <div className="flex flex-col  md:flex-row items-center justify-center mx-auto ">
                     <div className="md:w-1/2">
-                      <p className="medium-text heading-color text-center md:text-start">
+                      <p className="medium-text heading-color2 text-center md:text-start max-w-xl">
                         {data.who_we_are.description}
                       </p>
                     </div>
@@ -430,9 +437,9 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             <div className=" px-5 md:px-10 dark:bg-gradient-to-b from-[#7c007747] via-[#7c007747] via-[#7c007747] to-transparent pt-10 md:pt-20 ">
-              <div className="main-heading2 heading-color2 py-4 text-center mx-auto">
+              <div className="main-heading2 heading-color22 py-4 text-center mx-auto">
                 The Team
               </div>
               <div className="pt-8 pb-40 w-full">
@@ -459,7 +466,7 @@ export default function Home() {
                                 loading="lazy"
                               />
                             </motion.div>
-                            <div className="heading-4 heading-color2 text-center pt-2">
+                            <div className="heading-4 heading-color22 text-center pt-2">
                               {item.name}
                             </div>
                             <div className="subtitle text-center leading-snug headingColor">
@@ -469,7 +476,7 @@ export default function Home() {
                               {item.description}
                             </div>
                           </div>
-                          <div className="image_background_gradient2 z-[0]" />
+                          <div className=" z-[0]" />
                         </div>
                       </a>
                     </div>

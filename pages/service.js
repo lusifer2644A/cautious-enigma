@@ -148,7 +148,7 @@ export default function Home() {
             </motion.div>
 
             {/* Section 2 */}
-            <div className=" px-5 md:px-10 bg-[#F9E9FF] rounded-b-[2rem] pt-10 md:pt-40 ">
+            <div className=" px-5 md:px-10 main-light-background pt-10 md:pt-40 ">
               <div className="flex grid-2x2 items-around -mt-32 px-4 gap-4 h-96">
                 <div className=" h-full md:w-2/4 max-w-md relative">
                   <Image

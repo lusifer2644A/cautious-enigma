@@ -151,7 +151,7 @@ export default function Index() {
             </div>
 
             {/* Section 2 */}
-            <div className="main-heading2 headingColor2 text-justify md:text-center  max-w-6xl mx-auto pt-20 ">
+            <div className="main-heading2 headingColor2 text-justify md:text-center  max-w-6xl mx-auto pt-36 ">
               Global Check-In & Check-out Features
             </div>
             <div className="flex justify-center">
@@ -160,13 +160,13 @@ export default function Index() {
                   return (
                     <div
                       key={`product_${idx}`}
-                      className="flex flex-col items-center justify-start w-[80%] max-w-[400px] min-h-[500px] px-5 py-10 bg-gradient-to-b from-[#F9E9FF] shadow-lg to-[#F9E9FF] rounded-2xl"
+                      className="flex flex-col items-center justify-start w-[80%] max-w-[400px] min-h-[500px] px-5 py-10 pr_rad_grad shadow-lg rounded-2xl"
                     >
                       <div className="w-full">
                         <div className="w-60 h-60 my-5 flex items-center justify-center mx-auto relative">
-                          <div className="w-full h-full rounded-full border-[0.5px] border-[#1D1125] dark:border-[#E21D6438] flex items-center justify-center">
-                            <div className="w-[95%] h-[95%] rounded-full border-[2px] border-[#1D1125] dark:border-[#E21D6438] flex items-center justify-center">
-                              <div className="w-[95%] h-[95%] rounded-full border-[4px] border-[#1D1125] dark:border-[#E21D6438]">
+                          <div className="w-full h-full rounded-full border-[0.5px] border-[#ffffff] dark:border-[#E21D6438] flex items-center justify-center">
+                            <div className="w-[95%] h-[95%] rounded-full border-[2px] border-[#ffffff] dark:border-[#E21D6438] flex items-center justify-center">
+                              <div className="w-[95%] h-[95%] rounded-full border-[4px] border-[#ffffff] dark:border-[#E21D6438]">
                                 <Image
                                   className="w-full h-full object-contain"
                                   src={`${data.imageBasePath}/${feat.img}`}
@@ -182,7 +182,7 @@ export default function Index() {
                           <div className="image_background_gradient3"></div>
                         </div>
                       </div>
-                      <div className="heading-4 leading-snug heading-color2 text-center mt-5">
+                      <div className="heading-4 leading-snug heading-color text-center mt-5">
                         {feat.name}
                       </div>
                       <div className="flex flex-col gap-3 justify-center items-center mt-10 w-[70%]">

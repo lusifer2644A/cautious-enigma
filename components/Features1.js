@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
+import { motion } from "framer-motion";
 
 const items = [
   {
@@ -9,7 +10,7 @@ const items = [
       "Set-up your glocal e-commerce store in just three clicks and know what, where, how  to sell around the world",
     points: [
       {
-        icon: "brand-new.png",
+        icon: "globe--v1.png",
         text: "Develop digital brands with impactful product catalogues",
       },
       {
@@ -30,15 +31,15 @@ const items = [
       "Extremely efficient e-commerce export strategies for international markets entry",
     points: [
       {
-        icon: "",
+        icon: "globe--v1.png",
         text: "Explore global market potential and scale business exponentially ",
       },
       {
-        icon: "",
+        icon: "globe--v1.png",
         text: "Sell more with effective product-market customer strategy worldwide",
       },
       {
-        icon: "",
+        icon: "globe--v1.png",
         text: "Effective and efficient digital marketing strategies to give businesses the required digital push",
       },
     ],
@@ -51,15 +52,15 @@ const items = [
       "Ready made solutions for any pre selling needs to manage and maximise your global selling",
     points: [
       {
-        icon: "",
+        icon: "globe--v1.png",
         text: "One stop shop to help you with everything you need to launch, manage and grow your e-commerce",
       },
       {
-        icon: "",
+        icon: "globe--v1.png",
         text: "Customised and automated solutions from a curated set of experts",
       },
       {
-        icon: "",
+        icon: "globe--v1.png",
         text: "Efficient and economic solutions to catapult your e-commerce business",
       },
     ],
@@ -72,15 +73,15 @@ const items = [
       "Integrate your business with local and international marketplaces and grow exponentially",
     points: [
       {
-        icon: "",
+        icon: "globe--v1.png",
         text: "Get connected to all major marketplaces worldwide through a single link",
       },
       {
-        icon: "",
+        icon: "globe--v1.png",
         text: "Omni-channel retail plug-in to online and offline stores and seamless account management",
       },
       {
-        icon: "",
+        icon: "globe--v1.png",
         text: "Dynamic listings powered with customised language, products, pricing",
       },
     ],
@@ -93,15 +94,15 @@ const items = [
       "Seamless national and international omnichannel order fulfillment to super-charge businesses",
     points: [
       {
-        icon: "",
+        icon: "globe--v1.pngglobe--v1.png",
         text: "End to end international delivery run, warehousing, Quality Checks and Export complaint packaging",
       },
       {
-        icon: "",
+        icon: "globe--v1.pngglobe--v1.png",
         text: "Efficient and effective international dropshipping",
       },
       {
-        icon: "",
+        icon: "globe--v1.pngglobe--v1.png",
         text: "Worry free streamlined international returns procedure ",
       },
     ],
@@ -114,15 +115,15 @@ const items = [
       "Stress-free international companies adherence to mitigate any risks and losses",
     points: [
       {
-        icon: "",
+        icon: "globe--v1.pngglobe--v1.png",
         text: "Convenient documentation and records maintenance",
       },
       {
-        icon: "",
+        icon: "globe--v1.pngglobe--v1.png",
         text: "Incorporation of VAT, duties, certifications and restrictions",
       },
       {
-        icon: "",
+        icon: "globe--v1.pngglobe--v1.png",
         text: "Single point of contact for all international customs, licenses, permits and IOR service",
       },
     ],
@@ -135,15 +136,15 @@ const items = [
       "Unlock opportunities with convenient international payments and managing your digital business funds",
     points: [
       {
-        icon: "",
+        icon: "globe--v1.pngglobe--v1.png",
         text: "Easy access to collateral-free working capital with financing",
       },
       {
-        icon: "",
+        icon: "globe--v1.pngglobe--v1.png",
         text: "Get paid easily in international currencies across countries",
       },
       {
-        icon: "",
+        icon: "globe--v1.pngglobe--v1.png",
         text: "Mitigate losses with international transit insurance",
       },
     ],
@@ -155,15 +156,15 @@ const items = [
     subtitle: "Grow more by bulk international selling with buyer guarantee",
     points: [
       {
-        icon: "",
+        icon: "globe--v1.png",
         text: "Smart procurement with quality checks, merchandising and logistics",
       },
       {
-        icon: "",
+        icon: "globe--v1.png",
         text: "Strategic sourcing with curated network of vendors across geographies, sectors and specialities",
       },
       {
-        icon: "",
+        icon: "globe--v1.png",
         text: "Powerful gateway to the future of optimised sourcing",
       },
     ],
@@ -191,11 +192,13 @@ const Features1 = () => {
   };
 
   return (
-    <div className="w-full min-h-[500px] bg-[#1d1125] px-6 py-4 md:px-16 md:py-10 rounded-[2rem]">
+    <div className="w-full min-h-[500px] main-light-background px-6 py-4 md:px-32 md:py-10 rounded-[0rem]">
       <div className="grid grid-cols-1 md:grid-cols-[1fr_0.8fr] items-center max-h-full gap-5 h-[480px] md:h-[450px]">
         <div className="top_text flex flex-col gap-2">
-          <h3 className="heading-1 text-gray-50">{items[curr_slide].title}</h3>
-          <h3 className="subtitle font-noto text-gray-50 max-w-[500px]">
+          <h3 className="heading-1 heading-color2">
+            {items[curr_slide].title}
+          </h3>
+          <h3 className="subtitle font-noto heading-color2 max-w-[500px]">
             {items[curr_slide].subtitle}
           </h3>
 
@@ -210,13 +213,13 @@ const Features1 = () => {
                       alt=""
                     />
                   </span>
-                  <span className="caption-text text-gray-50">{it.text}</span>
+                  <span className="caption-text heading-color2">{it.text}</span>
                 </div>
               );
             })}
           </div>
           <button
-            className="btn-secondary2 mt-5"
+            className="btn-primary w-fit mt-5"
             onClick={() => router.push(items[curr_slide].link)}
           >
             Know More
@@ -236,8 +239,8 @@ const Features1 = () => {
           {items.map((it, index) => {
             return (
               <span
-                className={`subtitle text-gray-50 cursor-pointer w-8 h-8 rounded-full flex justify-center items-center ${
-                  curr_slide === index ? "bg-[#ffffff1a]" : ""
+                className={` heading-color2 cursor-pointer w-8 h-8 rounded-full flex justify-center items-center ${
+                  curr_slide === index ? "subtitle" : "small-text text-gray-500"
                 }`}
                 onClick={() => {
                   setCurrSlide(index);
@@ -249,16 +252,18 @@ const Features1 = () => {
             );
           })}
         </div>
-        <div className="flex flex-row gap-5">
+        <div className="flex flex-row gap-5 md:pr-32">
           <button
             aria-label="prev-button"
             className={`rounded-full w-10 h-10 flex justify-center items-center ${
-              curr_slide === 0 ? "bg-[#ffffff6e]" : "bg-[#ffffff]"
+              curr_slide === 0 ? "bg-[#21112B33]" : "bg-[#1d1125]"
             } shadow-md`}
             onClick={onPrev}
           >
             <img
-              src="https://img.icons8.com/material-rounded/50/001E3C/chevron-left.png"
+              src={`https://img.icons8.com/material-rounded/50/${
+                curr_slide === 0 ? "001E3C" : "ffffff"
+              }/chevron-left.png`}
               className="w-1/2 h-1/2 object-contain"
             />
           </button>
@@ -266,13 +271,15 @@ const Features1 = () => {
             aria-label="next-button"
             className={`rounded-full w-10 h-10 flex justify-center items-center ${
               curr_slide === items.length - 1
-                ? "bg-[#ffffff6e]"
-                : "bg-[#ffffff]"
+                ? "bg-[#21112B33]"
+                : "bg-[#1d1125]"
             } shadow-md`}
             onClick={onNext}
           >
             <img
-              src="https://img.icons8.com/material-rounded/50/001E3C/chevron-right.png"
+              src={`https://img.icons8.com/material-rounded/50/${
+                curr_slide === items.length - 1 ? "001E3C" : "ffffff"
+              }/chevron-right.png`}
               className="w-1/2 h-1/2 object-contain"
             />
           </button>

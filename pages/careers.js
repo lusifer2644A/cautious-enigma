@@ -155,7 +155,7 @@ export default function careers() {
               </div>
             </div>
 
-            <div className="bg-grad-light rounded-[2rem] py-10 px-4">
+            <div className="main-light-background rounded-[0rem] py-10 px-4">
               <div className=" main-heading2 headin-color2 text-center py-4">
                 What we believe in
               </div>
@@ -327,7 +327,7 @@ export default function careers() {
               </div>
             </div>
 
-            <div className="bg-grad-light rounded-[2rem] py-10 px-4 mt-20">
+            <div className="main-light-background rounded-[0rem] py-10 px-4 mt-20">
               <div className=" main-heading2 headin-color2 text-center py-4">
                 Superhero Crew Selection
               </div>
@@ -369,7 +369,7 @@ export default function careers() {
             </div>
 
             {/* career last */}
-            <div className="bg-grad-purple rounded-[2rem] py-10 px-4 flex flex-col gap-8 justify-center items-center">
+            <div className="bg-grad-purple rounded-[0rem] py-10 px-4 flex flex-col gap-8 justify-center items-center">
               <div className=" heading-1 heading-color text-center">
                 Join the crew
               </div>

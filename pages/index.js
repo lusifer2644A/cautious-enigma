@@ -170,7 +170,7 @@ export default function Home() {
         <Header />
         <div className="absolute top-0 left-0 white-rad-grad md:w-[3000px] md:h-[1200px] -translate-x-1/2 -translate-y-1/2 z-[1]"></div>
 
-        <div className="page-bg bg-[#AC2EED29] z-[10] static">
+        <div className="page-bg z-[10] static">
           <div className="page-container main ">
             {/* Hero Section */}
             <div className="w-full md:h-[50rem] overflow-y-hidden grid grid-cols-1 sm:grid-cols-[0.6fr_1fr] items-center gap-5 md:gap-10 px-5 py-12 md:px-5 md:py-5 lg:px-20 lg:py-10">
@@ -220,7 +220,7 @@ export default function Home() {
               </div>
             </div>
             {/* vision and mission */}
-            <div className="w-full min-h-[30rem] flex flex-col md:flex-row justify-center rounded-[2rem] bg-gradient-to-r from-[#1d1125] to-[#1d1125] text-gray-50 overflow-y-hidden items-center gap-4 md:gap-32 lg:gap-56 xl:gap-72 px-5 py-10 lg:px-20 lg:py-10">
+            <div className="w-full min-h-[30rem] flex flex-col md:flex-row justify-center main-light-background text-gray-50 overflow-y-hidden items-center gap-4 md:gap-32 lg:gap-56 xl:gap-72 px-5 py-10 lg:px-20 lg:py-10">
               <div className="relative w-full h-full md:w-fit">
                 <div className="flex items-center justify-center mx-auto  ">
                   <Image
@@ -237,20 +237,20 @@ export default function Home() {
               </div>
               <div className="flex flex-col gap-7 max-w-[400px] justify-self-center">
                 <div>
-                  <h2 className="heading-2">Vision</h2>
-                  <p className="subtitle text-gray-50">
+                  <h2 className="heading-2 heading-color2">Vision</h2>
+                  <p className="subtitle heading-color2">
                     Redefining global selling
                   </p>
                 </div>
                 <div className="">
-                  <h2 className="heading-2">Mission</h2>
-                  <h2 className="subtitle text-gray-50">
+                  <h2 className="heading-2 heading-color2">Mission</h2>
+                  <h2 className="subtitle  heading-color2">
                     Simplify and maximize the global potential for every Indian
                     seller
                   </h2>
                 </div>
                 <button
-                  className="btn-secondary2 "
+                  className="btn-primary w-fit"
                   onClick={() => router.push("/about")}
                 >
                   Know More
@@ -407,15 +407,15 @@ export default function Home() {
             </div>
 
             {/* integrations */}
-            <div className="w-full min-h-[30rem] rounded-[2rem] md:mt-20 flex flex-col justify-center bg-gradient-to-r from-[#1d1125] to-[#1d1125] text-gray-50 overflow-y-hidden items-center  px-5 py-5 lg:px-20 lg:py-10">
-              <h2 className="main-heading2">Integrations</h2>
-              <p className="subtitle mt-2 text-gray-50">
-                Something for everyone
+            <div className="w-full min-h-[30rem] rounded-[0rem] md:mt-20 flex flex-col justify-center main-light-background text-gray-50 overflow-y-hidden items-center  px-5 py-5 lg:px-20 lg:py-10">
+              <h2 className="main-heading2 heading-color2">Integrations</h2>
+              <p className="subtitle mt-2 heading-color2">
+                Committed to your success
               </p>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 grid-wrap gap-12 justify-center items-center py-8 px-8 w-full lg:w-4/5">
+              <div className="grid grid-cols-1 lg:grid-cols-2 grid-wrap gap-12 justify-center items-center py-8 px-8 w-full lg:w-full">
                 {data.integrations.list.map((item, index) => (
-                  <div class="grid grid-rows-3 grid-flow-col gap-x-2 gap-y-0 bg-[#ffffff14] w-full lg:w-auto shadow-lg rounded-lg px-5 py-8 h-full">
+                  <div class="grid grid-rows-3 grid-flow-col gap-x-2 gap-y-0 bg-[#ffffff] w-full lg:w-full shadow-lg rounded-xl px-5 py-8 h-full">
                     <div class="row-span-3 flex justify-center">
                       <svg
                         width="54"
@@ -424,11 +424,13 @@ export default function Home() {
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <path fill="#ffffff" d={item.svgPath} />
+                        <path fill="#1d1125" d={item.svgPath} />
                       </svg>
                     </div>
-                    <div class="col-span-2 heading-4 h-min">{item.title}</div>
-                    <div class="row-span-2 col-span-2 font-noto max-w-[250px]">
+                    <div class="col-span-2 heading-4 h-min heading-color2">
+                      {item.title}
+                    </div>
+                    <div class="row-span-2 col-span-2 font-noto max-w-[300px] subtitle">
                       {item.body}
                     </div>
                   </div>

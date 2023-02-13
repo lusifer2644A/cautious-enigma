@@ -123,7 +123,7 @@ export default function Index() {
               </div>
             </div>
             <div className="container mx-auto flex items-center flex-row pt-6 gap-8 flex-wrap justify-center mt-10">
-              <div className="shadow-lg min-h-[150px]  md:min-h-[260px]  w-full max-w-[350px] body-3  product_box1 md:body-2 box_drop_shadow text-center bg-white h-full py-8 md:py-12 px-6 rounded-2xl">
+              <div className="shadow-lg min-h-[150px]  md:min-h-[260px]  w-full max-w-[350px] body-3  product_box2 md:body-2 box_drop_shadow text-center bg-white h-full py-8 md:py-12 px-6 rounded-2xl">
                 The check-in solution enables local language content, assets and
                 customer support using geolocation, translation, pricing tool,
                 and local language chatbots
@@ -131,7 +131,7 @@ export default function Index() {
               <div className="rounded-full bg-[#2B2033] w-[30px] h-[30px] flex items-center justify-center">
                 <div className="rounded-full bg-[#ffffff] dark:bg-[#1d1125] w-[15px] h-[15px] "></div>
               </div>
-              <div className="shadow-lg min-h-[150px]  md:min-h-[260px]  w-full max-w-[350px] body-3  product_box1 md:body-2 box_drop_shadow text-center bg-white h-full py-8 md:py-12 px-6 rounded-2xl">
+              <div className="shadow-lg min-h-[150px]  md:min-h-[260px]  w-full max-w-[350px] body-3  product_box2 md:body-2 box_drop_shadow text-center bg-white h-full py-8 md:py-12 px-6 rounded-2xl">
                 The check-out solution enables accurate landed cost, inclusive
                 of duties, taxes and shipping and an optimal international
                 payment gateway
@@ -139,7 +139,7 @@ export default function Index() {
               <div className="rounded-full bg-[#2B2033] w-[30px] h-[30px] flex items-center justify-center">
                 <div className="rounded-full bg-[#ffffff] dark:bg-[#1d1125] w-[15px] h-[15px] "></div>
               </div>
-              <div className="shadow-lg min-h-[150px]  md:min-h-[260px]  w-full max-w-[350px] body-3  product_box1 md:body-2 box_drop_shadow text-center bg-white h-full py-8 md:py-12 px-6 rounded-2xl">
+              <div className="shadow-lg min-h-[150px]  md:min-h-[260px]  w-full max-w-[350px] body-3  product_box2 md:body-2 box_drop_shadow text-center bg-white h-full py-8 md:py-12 px-6 rounded-2xl">
                 Fully compliant as per web store norms with seamless
                 installation - as easy as selecting a theme or installing a web
                 store plugin
@@ -147,7 +147,7 @@ export default function Index() {
             </div>
 
             {/* Section 2 */}
-            <div className="main-heading2 headingColor2 text-justify md:text-center  max-w-6xl mx-auto pt-20 ">
+            <div className="main-heading2 headingColor2 text-justify md:text-center  max-w-6xl mx-auto pt-36 ">
               Global Check-In & Check-out Features
             </div>
             <div className="flex justify-center">
@@ -156,13 +156,13 @@ export default function Index() {
                   return (
                     <div
                       key={`product_${idx}`}
-                      className="flex flex-col shadow-xl items-center justify-start w-[80%] max-w-[400px] min-h-[500px] px-5 py-10 bg-gradient-to-b from-[#1D1125F2] to-[#1D1125F2] rounded-2xl"
+                      className="flex flex-col shadow-xl items-center justify-start w-[80%] max-w-[400px] min-h-[500px] px-5 py-10 pr_rad_grad rounded-2xl"
                     >
                       <div className="w-full">
                         <div className="w-60 h-60 my-5 flex items-center justify-center mx-auto relative">
-                          <div className="w-full h-full rounded-full border-[0.5px] border-[#D96C72] dark:border-[#E21D6438] flex items-center justify-center">
-                            <div className="w-[95%] h-[95%] rounded-full border-[2px] border-[#D96C72] dark:border-[#E21D6438] flex items-center justify-center">
-                              <div className="w-[95%] h-[95%] rounded-full border-[4px] border-[#FFB0B5] dark:border-[#E21D6438]">
+                          <div className="w-full h-full rounded-full border-[0.5px] border-[#ffffff] dark:border-[#E21D6438] flex items-center justify-center">
+                            <div className="w-[95%] h-[95%] rounded-full border-[2px] border-[#ffffff] dark:border-[#E21D6438] flex items-center justify-center">
+                              <div className="w-[95%] h-[95%] rounded-full border-[4px] border-[#ffffff] dark:border-[#E21D6438]">
                                 <Image
                                   className="w-full h-full object-contain"
                                   src={`${data.imageBasePath}/${feat.img}`}
