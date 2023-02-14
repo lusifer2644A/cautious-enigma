@@ -54,7 +54,7 @@ export default function Footer() {
         <footer className="pt-8 md:pt-20">
           <div className=" mx-auto ">
             <div className="sm:flex ">
-              <div className="sm:mt-0 sm:w-full sm:px-8 flex flex-col lg:flex-row justify-center md:justify-start md:justify-between gap-12 lg:gap-40 ">
+              <div className="sm:mt-0 sm:w-full sm:px-8 flex flex-col lg:flex-row justify-center md:justify-between  gap-12 lg:gap-40 ">
                 <div className="flex flex-col lg:w-1/4 items-center md:items-start">
                   <h2 className="heading-2 md:text-[1.7rem] text-accent-1 w-fit">
                     Get Started for FREE
@@ -94,11 +94,8 @@ export default function Footer() {
                       </div>
                     </div>
                   </span>
-                  <div className="subtitle-2 text-white pt-2 md:pt-12 lg:pt-40">
-                    contactus@goglocal.com{" "}
-                  </div>
                 </div>
-                <div className="flex flex-row items-start justify-start flex-wrap  lg:w-full gap-x-12 md:gap-x-12 lg:gap-x-12 xl:gap-x-32 gap-y-10">
+                <div className="flex flex-row items-start justify-start flex-wrap  lg:w-fit gap-x-12 md:gap-x-12 lg:gap-x-12 xl:gap-x-20 gap-y-10 ">
                   <div className="flex flex-col w-fit">
                     <LinkButton url="/about" title="About" />
                     <LinkButton url="/products" title="Products" />
@@ -154,9 +151,14 @@ export default function Footer() {
             </div>
           </div>
           <div className="py-4 mt-8 mx-auto px-4 md:px-2">
-            <div className="mt-2 flex flex-col md:flex-row flex-wrap gap-5 md:gap-8 items-center justify-center md:justify-around">
-              <div className="text-white text-sm md:text-base text-center w-fit">
-                © 2022 goGlocal Pvt Ltd Copyrights and Rights Reserved
+            <div className="mt-2 flex flex-col md:flex-row flex-wrap gap-5 md:gap-8 items-end justify-center md:justify-evenly h-fit  mb-10">
+              <div>
+                <p className="subtitle-2 text-white ">
+                  contactus@goglocal.com{" "}
+                </p>
+                <p className="text-white text-sm md:text-base text-center w-fit  mt-2">
+                  © 2022 goGlocal Pvt Ltd Copyrights and Rights Reserved
+                </p>
               </div>
               <div className="w-fit flex flex-row items-center justify-start gap-1 md:gap-1 text-white text-xs md:text-base text-center">
                 <div className="w-fit">Terms and Condtions</div>
@@ -202,7 +204,7 @@ export default function Footer() {
                   href="https://www.linkedin.com/company/goglocal/"
                   target="_blank"
                   rel="noreferrer"
-                  className="subtitle-3 text-accent-1 pb-2"
+                  className="subtitle-3 text-accent-1"
                 >
                   Stay Connected
                 </a>

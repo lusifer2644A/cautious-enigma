@@ -94,15 +94,15 @@ const items = [
       "Seamless national and international omnichannel order fulfillment to super-charge businesses",
     points: [
       {
-        icon: "globe--v1.pngglobe--v1.png",
+        icon: "globe--v1.png",
         text: "End to end international delivery run, warehousing, Quality Checks and Export complaint packaging",
       },
       {
-        icon: "globe--v1.pngglobe--v1.png",
+        icon: "globe--v1.png",
         text: "Efficient and effective international dropshipping",
       },
       {
-        icon: "globe--v1.pngglobe--v1.png",
+        icon: "globe--v1.png",
         text: "Worry free streamlined international returns procedure ",
       },
     ],
@@ -115,15 +115,15 @@ const items = [
       "Stress-free international companies adherence to mitigate any risks and losses",
     points: [
       {
-        icon: "globe--v1.pngglobe--v1.png",
+        icon: "globe--v1.png",
         text: "Convenient documentation and records maintenance",
       },
       {
-        icon: "globe--v1.pngglobe--v1.png",
+        icon: "globe--v1.png",
         text: "Incorporation of VAT, duties, certifications and restrictions",
       },
       {
-        icon: "globe--v1.pngglobe--v1.png",
+        icon: "globe--v1.png",
         text: "Single point of contact for all international customs, licenses, permits and IOR service",
       },
     ],
@@ -136,15 +136,15 @@ const items = [
       "Unlock opportunities with convenient international payments and managing your digital business funds",
     points: [
       {
-        icon: "globe--v1.pngglobe--v1.png",
+        icon: "globe--v1.png",
         text: "Easy access to collateral-free working capital with financing",
       },
       {
-        icon: "globe--v1.pngglobe--v1.png",
+        icon: "globe--v1.png",
         text: "Get paid easily in international currencies across countries",
       },
       {
-        icon: "globe--v1.pngglobe--v1.png",
+        icon: "globe--v1.png",
         text: "Mitigate losses with international transit insurance",
       },
     ],
@@ -206,14 +206,16 @@ const Features1 = () => {
             {items[curr_slide].points.map((it, idx) => {
               return (
                 <div className="flex flex-row gap-5 items-center" key={idx}>
-                  <span className="w-10 h-10 flex justify-center items-center bg-[#ffffff] rounded-lg">
+                  <div className="w-10 h-10 flex justify-center items-center bg-[#ffffff] rounded-lg">
                     <img
                       className="w-4/5 h-4/5 object-contain"
                       src={`https://img.icons8.com/ios/50/22172A/${it.icon}`}
                       alt=""
                     />
-                  </span>
-                  <span className="caption-text heading-color2">{it.text}</span>
+                  </div>
+                  <div className="caption-text heading-color2 w-full">
+                    {it.text}
+                  </div>
                 </div>
               );
             })}

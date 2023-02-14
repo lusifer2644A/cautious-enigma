@@ -173,8 +173,8 @@ export default function Home() {
         <div className="page-bg z-[10] static">
           <div className="page-container main ">
             {/* Hero Section */}
-            <div className="w-full md:h-[50rem] overflow-y-hidden grid grid-cols-1 sm:grid-cols-[0.6fr_1fr] items-center gap-5 md:gap-10 px-5 py-12 md:px-5 md:py-5 lg:px-20 lg:py-10">
-              <div className="flex flex-col gap-5">
+            <div className="w-full md:h-[50rem] overflow-y-hidden flex flex-row justify-center items-center items-center gap-5 md:gap-20 px-5 py-12 md:px-5 md:py-5 lg:px-20 lg:py-10">
+              <div className="flex flex-col gap-5 w-fit max-w-lg">
                 <motion.h1
                   initial={{ opacity: 0, y: 100 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -187,7 +187,7 @@ export default function Home() {
                   initial={{ opacity: 0, y: 100 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.35 }}
-                  className="subtitle text-dark-2 dark:text-light-2"
+                  className="subtitle text-dark-2 dark:text-light-2 max-w-md"
                 >
                   {data.hero.subtitle}
                 </motion.h2>
@@ -205,7 +205,7 @@ export default function Home() {
                   </button>
                 </motion.div>
               </div>
-              <div className="w-full h-full max-h-full justify-self-end">
+              <div className="w-fit h-full max-h-full justify-self-end">
                 <div className="w-full h-full max-h-full flex items-center justify-center mx-auto  ">
                   <Image
                     className="w-fit h-full object-contain z-10 max-h-full"
@@ -413,9 +413,12 @@ export default function Home() {
                 Committed to your success
               </p>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 grid-wrap gap-12 justify-center items-center py-8 px-8 w-full lg:w-full">
+              <div className="flex flex-row flex-wrap gap-4 justify-center items-center py-8 sm:px-8 w-full lg:w-full">
                 {data.integrations.list.map((item, index) => (
-                  <div class="grid grid-rows-3 grid-flow-col gap-x-2 gap-y-0 bg-[#ffffff] w-full lg:w-full shadow-lg rounded-xl px-5 py-8 h-full">
+                  <div
+                    class="flex flex-col  sm:flex-row gap-x-8 gap-y-5 bg-[#ffffff] w-fit shadow-lg rounded-xl px-6 py-8 h-full"
+                    key={index}
+                  >
                     <div class="row-span-3 flex justify-center">
                       <svg
                         width="54"
@@ -427,11 +430,13 @@ export default function Home() {
                         <path fill="#1d1125" d={item.svgPath} />
                       </svg>
                     </div>
-                    <div class="col-span-2 heading-4 h-min heading-color2">
-                      {item.title}
-                    </div>
-                    <div class="row-span-2 col-span-2 font-noto max-w-[300px] subtitle">
-                      {item.body}
+                    <div className="flex flex-col gap-5">
+                      <div class=" heading-4 h-min heading-color2">
+                        {item.title}
+                      </div>
+                      <div class=" font-noto max-w-[350px] subtitle">
+                        {item.body}
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -440,19 +445,19 @@ export default function Home() {
 
             {/* careers */}
             <div className="flex justify-center flex-col items-center px-2 py-12">
-              <h2 className="main-heading2">Careers</h2>
+              <h2 className="main-heading2">Careers @ goGLOCAL</h2>
               <p className="subtitle mt-2">Growing & going far together</p>
 
-              <div className="flex flex-col-reverse md:flex-row justify-around items-center mx-auto gap-4 md:gap-32 lg:gap-40  md:gap-8 pt-8 px-4">
+              <div className="flex flex-col-reverse md:flex-row justify-center items-center mx-auto gap-4 md:gap-8 pt-8 px-4">
                 <div className="w-full md:w-2/4 max-w-[600px] flex flex-col items-center md:items-start justify-start gap-4">
                   <h2 className="body-2 text-center md:text-start text-dark-2 dark:text-light-2">
                     {data.careers.description}
                   </h2>
                   <div>
-                    <h2 className="body-2 font-semibold text-center md:text-left text-dark-2 dark:text-light-2">
+                    <h2 className="body-2  text-center md:text-left text-dark-2 dark:text-light-2">
                       {data.careers.description_2}
                     </h2>
-                    <h2 className="body-2 font-semibold text-center md:text-left text-dark-2 dark:text-light-2">
+                    <h2 className="body-2 text-center md:text-left text-dark-2 dark:text-light-2">
                       {data.careers.description_3}
                     </h2>
                   </div>
@@ -461,7 +466,7 @@ export default function Home() {
                       className="btn-primary w-fit "
                       onClick={() => router.push("/openposition")}
                     >
-                      Know More
+                      Join Us
                     </button>
                   </div>
                 </div>
