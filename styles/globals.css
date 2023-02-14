@@ -217,6 +217,31 @@
     box-shadow: 0 5px 0 10px #c2c2c2;
   }
 
+  .loader {
+    border: 3px solid #f3f3f3; /* Light grey */
+    border-top: 3px solid #1d1125; /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .formError {
+    color: rgb(255, 95, 95);
+    font-size: 13px;
+    padding-top: 5px;
+    padding-left: 10px;
+  }
+
   /* ------------OLD------------------ */
   .headerBackground {
     @apply bg-white dark:bg-black;
