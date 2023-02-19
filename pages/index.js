@@ -173,8 +173,8 @@ export default function Home() {
         <div className="page-bg z-[10] static">
           <div className="page-container main ">
             {/* Hero Section */}
-            <div className="w-full md:h-[50rem] overflow-y-hidden flex flex-row justify-center items-center items-center gap-5 md:gap-20 px-5 py-12 md:px-5 md:py-5 lg:px-20 lg:py-10">
-              <div className="flex flex-col gap-5 w-fit max-w-lg">
+            <div className="w-full md:h-[50rem] overflow-y-hidden flex flex-row justify-center items-start gap-5 md:gap-10 xl:gap-36 px-5 py-12 md:px-5 md:py-5 lg:px-20 lg:py-10">
+              <div className="flex flex-col gap-5 w-fit max-w-lg pt-[5%]">
                 <motion.h1
                   initial={{ opacity: 0, y: 100 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -221,7 +221,12 @@ export default function Home() {
             </div>
             {/* vision and mission */}
             <div className="w-full min-h-[30rem] flex flex-col md:flex-row justify-center main-light-background text-gray-50 overflow-y-hidden items-center gap-4 md:gap-32 lg:gap-56 xl:gap-72 px-5 py-10 lg:px-20 lg:py-10">
-              <div className="relative w-full h-full md:w-fit">
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="relative w-full h-full md:w-fit"
+              >
                 <div className="flex items-center justify-center mx-auto  ">
                   <Image
                     className="w-auto h-56 md:h-72 lg:h-[25rem] object-contain"
@@ -234,10 +239,17 @@ export default function Home() {
                 </div>
 
                 <div className="image_background_gradient"></div>
-              </div>
+              </motion.div>
               <div className="flex flex-col gap-7 max-w-[400px] justify-self-center">
                 <div>
-                  <h2 className="heading-2 heading-color2">Vision</h2>
+                  <motion.h2
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.6 }}
+                    className="heading-2 heading-color2"
+                  >
+                    Vision
+                  </motion.h2>
                   <p className="subtitle heading-color2">
                     Redefining global selling
                   </p>
@@ -400,7 +412,7 @@ export default function Home() {
 
               <button
                 className="btn-primary w-fit md:mt-6"
-                onClick={() => router.push(pr.link)}
+                onClick={() => router.push("/connect/seller")}
               >
                 Know More
               </button>

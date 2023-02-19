@@ -181,8 +181,8 @@ export default function Header() {
               >
                 <Link href="/careers">CAREERS</Link>
               </div>
-              <Link href="#">
-                <p className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-full shadow-sm small-text tracking-wider font-medium text-black accent-grad">
+              <Link href="/login">
+                <p className="ml-8 cursor-pointer whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-full shadow-sm small-text tracking-wider font-medium text-black accent-grad">
                   SIGN IN
                 </p>
               </Link>
@@ -284,7 +284,7 @@ export default function Header() {
                       </span>
                     </Link>
                     <Link
-                      href="#"
+                      href="/signup"
                       className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                     >
                       <span className="ml-3 text-base font-medium headingColor">

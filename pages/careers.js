@@ -3,12 +3,14 @@ import { motion } from "framer-motion";
 import Image from "next/future/image";
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import { RoundedButton } from "../components/button/RoundedButton";
 import Footer from "../components/Footer";
 import Header from "./../components/Header";
 
 export default function careers() {
+  const router = useRouter();
   const data = {
     title: "Growing and going far together",
     subTitle:

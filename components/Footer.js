@@ -54,7 +54,7 @@ export default function Footer() {
         <footer className="pt-8 md:pt-20">
           <div className=" mx-auto ">
             <div className="sm:flex ">
-              <div className="sm:mt-0 sm:w-full sm:px-8 flex flex-col lg:flex-row justify-center md:justify-between  gap-12 lg:gap-40 ">
+              <div className="sm:mt-0 sm:w-full sm:px-8 flex flex-col lg:flex-row justify-center md:justify-around  gap-12 lg:gap-40 ">
                 <div className="flex flex-col lg:w-1/4 items-center md:items-start">
                   <h2 className="heading-2 md:text-[1.7rem] text-accent-1 w-fit">
                     Get Started for FREE
@@ -151,9 +151,9 @@ export default function Footer() {
             </div>
           </div>
           <div className="py-4 mt-8 mx-auto px-4 md:px-2">
-            <div className="mt-2 flex flex-col md:flex-row flex-wrap gap-5 md:gap-8 items-end justify-center md:justify-evenly h-fit  mb-10">
+            <div className="mt-2 flex flex-col md:flex-row flex-wrap gap-5 md:gap-8 items-center sm:items-end justify-center md:justify-evenly h-fit  mb-10">
               <div>
-                <p className="subtitle-2 text-white ">
+                <p className="subtitle-2 text-white text-center sm:text-start">
                   contactus@goglocal.com{" "}
                 </p>
                 <p className="text-white text-sm md:text-base text-center w-fit  mt-2">

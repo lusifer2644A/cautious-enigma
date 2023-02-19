@@ -10,15 +10,15 @@ const items = [
       "Set-up your glocal e-commerce store in just three clicks and know what, where, how  to sell around the world",
     points: [
       {
-        icon: "globe--v1.png",
+        icon: "icon-1.svg",
         text: "Develop digital brands with impactful product catalogues",
       },
       {
-        icon: "globe--v1.png",
+        icon: "icon-2.svg",
         text: "Scale globally with effective market strategies",
       },
       {
-        icon: "globe--v1.png",
+        icon: "icon-3.svg",
         text: "Sell more with platforms compliant catalogue management",
       },
     ],
@@ -31,15 +31,15 @@ const items = [
       "Extremely efficient e-commerce export strategies for international markets entry",
     points: [
       {
-        icon: "globe--v1.png",
+        icon: "icon-1.svg",
         text: "Explore global market potential and scale business exponentially ",
       },
       {
-        icon: "globe--v1.png",
+        icon: "icon-1.svg",
         text: "Sell more with effective product-market customer strategy worldwide",
       },
       {
-        icon: "globe--v1.png",
+        icon: "icon-1.svg",
         text: "Effective and efficient digital marketing strategies to give businesses the required digital push",
       },
     ],
@@ -52,15 +52,15 @@ const items = [
       "Ready made solutions for any pre selling needs to manage and maximise your global selling",
     points: [
       {
-        icon: "globe--v1.png",
+        icon: "icon-1.svg",
         text: "One stop shop to help you with everything you need to launch, manage and grow your e-commerce",
       },
       {
-        icon: "globe--v1.png",
+        icon: "icon-1.svg",
         text: "Customised and automated solutions from a curated set of experts",
       },
       {
-        icon: "globe--v1.png",
+        icon: "icon-1.svg",
         text: "Efficient and economic solutions to catapult your e-commerce business",
       },
     ],
@@ -73,15 +73,15 @@ const items = [
       "Integrate your business with local and international marketplaces and grow exponentially",
     points: [
       {
-        icon: "globe--v1.png",
+        icon: "icon-1.svg",
         text: "Get connected to all major marketplaces worldwide through a single link",
       },
       {
-        icon: "globe--v1.png",
+        icon: "icon-1.svg",
         text: "Omni-channel retail plug-in to online and offline stores and seamless account management",
       },
       {
-        icon: "globe--v1.png",
+        icon: "icon-1.svg",
         text: "Dynamic listings powered with customised language, products, pricing",
       },
     ],
@@ -94,15 +94,15 @@ const items = [
       "Seamless national and international omnichannel order fulfillment to super-charge businesses",
     points: [
       {
-        icon: "globe--v1.png",
+        icon: "icon-1.svg",
         text: "End to end international delivery run, warehousing, Quality Checks and Export complaint packaging",
       },
       {
-        icon: "globe--v1.png",
+        icon: "icon-1.svg",
         text: "Efficient and effective international dropshipping",
       },
       {
-        icon: "globe--v1.png",
+        icon: "icon-1.svg",
         text: "Worry free streamlined international returns procedure ",
       },
     ],
@@ -115,15 +115,15 @@ const items = [
       "Stress-free international companies adherence to mitigate any risks and losses",
     points: [
       {
-        icon: "globe--v1.png",
+        icon: "icon-1.svg",
         text: "Convenient documentation and records maintenance",
       },
       {
-        icon: "globe--v1.png",
+        icon: "icon-1.svg",
         text: "Incorporation of VAT, duties, certifications and restrictions",
       },
       {
-        icon: "globe--v1.png",
+        icon: "icon-1.svg",
         text: "Single point of contact for all international customs, licenses, permits and IOR service",
       },
     ],
@@ -136,15 +136,15 @@ const items = [
       "Unlock opportunities with convenient international payments and managing your digital business funds",
     points: [
       {
-        icon: "globe--v1.png",
+        icon: "icon-1.svg",
         text: "Easy access to collateral-free working capital with financing",
       },
       {
-        icon: "globe--v1.png",
+        icon: "icon-1.svg",
         text: "Get paid easily in international currencies across countries",
       },
       {
-        icon: "globe--v1.png",
+        icon: "icon-1.svg",
         text: "Mitigate losses with international transit insurance",
       },
     ],
@@ -156,15 +156,15 @@ const items = [
     subtitle: "Grow more by bulk international selling with buyer guarantee",
     points: [
       {
-        icon: "globe--v1.png",
+        icon: "icon-1.svg",
         text: "Smart procurement with quality checks, merchandising and logistics",
       },
       {
-        icon: "globe--v1.png",
+        icon: "icon-1.svg",
         text: "Strategic sourcing with curated network of vendors across geographies, sectors and specialities",
       },
       {
-        icon: "globe--v1.png",
+        icon: "icon-1.svg",
         text: "Powerful gateway to the future of optimised sourcing",
       },
     ],
@@ -193,50 +193,53 @@ const Features1 = () => {
 
   return (
     <div className="w-full min-h-[500px] main-light-background px-6 py-4 md:px-32 md:py-10 rounded-[0rem]">
-      <div className="grid grid-cols-1 md:grid-cols-[1fr_0.8fr] items-center max-h-full gap-5 h-[480px] md:h-[450px]">
-        <div className="top_text flex flex-col gap-2">
-          <h3 className="heading-1 heading-color2">
-            {items[curr_slide].title}
-          </h3>
-          <h3 className="subtitle font-noto heading-color2 max-w-[500px]">
-            {items[curr_slide].subtitle}
-          </h3>
+      <div className="flex justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_0.8fr] w-fit items-center max-h-full gap-10 h-[480px] md:h-[450px]">
+          <div className="top_text flex flex-col gap-2">
+            <h3 className="heading-1 heading-color2">
+              {items[curr_slide].title}
+            </h3>
+            <h3 className="subtitle font-noto heading-color2 max-w-[500px]">
+              {items[curr_slide].subtitle}
+            </h3>
 
-          <div className="points flex flex-col gap-5 mt-10">
-            {items[curr_slide].points.map((it, idx) => {
-              return (
-                <div className="flex flex-row gap-5 items-center" key={idx}>
-                  <div className="w-10 h-10 flex justify-center items-center bg-[#ffffff] rounded-lg">
-                    <img
-                      className="w-4/5 h-4/5 object-contain"
-                      src={`https://img.icons8.com/ios/50/22172A/${it.icon}`}
-                      alt=""
-                    />
+            <div className="points flex flex-col gap-5 mt-10">
+              {items[curr_slide].points.map((it, idx) => {
+                return (
+                  <div className="flex flex-row gap-5 items-center" key={idx}>
+                    <div className="w-10 h-10 flex justify-center items-center bg-[#1d1125] rounded-lg">
+                      <img
+                        className="w-3/5 h-3/5 object-contain"
+                        src={`/asset/feature-slide/${it.icon}`}
+                        alt=""
+                        fill="#ffffff"
+                      />
+                    </div>
+                    <div className="caption-text heading-color2 w-full max-w-xl">
+                      {it.text}
+                    </div>
                   </div>
-                  <div className="caption-text heading-color2 w-full">
-                    {it.text}
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
+            <button
+              className="btn-primary w-fit mt-5"
+              onClick={() => router.push(items[curr_slide].link)}
+            >
+              Know More
+            </button>
           </div>
-          <button
-            className="btn-primary w-fit mt-5"
-            onClick={() => router.push(items[curr_slide].link)}
-          >
-            Know More
-          </button>
-        </div>
-        <div className="h-[350px] w-full hidden md:block">
-          <img
-            className="w-full h-full object-contain"
-            src={`/asset/feature-slide/${items[curr_slide].image}`}
-            alt="hero image"
-            loading="lazy"
-          />
+          <div className="h-[350px] w-full hidden md:block">
+            <img
+              className="w-full h-full object-contain"
+              src={`/asset/feature-slide/${items[curr_slide].image}`}
+              alt="hero image"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
-      <div className="bottom pt-16 flex flex-row justify-end md:justify-between items-center">
+      <div className="bottom pt-16 flex flex-row justify-end md:justify-around items-center">
         <div className="flex-row gap-5 md:gap-6 hidden md:flex">
           {items.map((it, index) => {
             return (
