@@ -132,7 +132,7 @@ export default function Index() {
                     <div>
                       <input
                         className="bg-[#F0F0F0] dark:bg-transparent border-2 border-[#D8D8D8] py-4 px-4 md:px-8 w-full rounded-xl focus:outline-none outline-none text-black"
-                        placeholder="your company’s name"
+                        placeholder="Your company’s name"
                         name="company"
                         value={state.company}
                         onChange={handleChange}
@@ -142,7 +142,7 @@ export default function Index() {
                     <div>
                       <input
                         className="bg-[#F0F0F0] dark:bg-transparent border-2 border-[#D8D8D8] py-4 px-4 md:px-8 w-full rounded-xl focus:outline-none outline-none text-black"
-                        placeholder="email"
+                        placeholder="Email"
                         name="email"
                         value={state.email}
                         onChange={handleChange}
@@ -152,7 +152,7 @@ export default function Index() {
                     <div>
                       <input
                         className="bg-[#F0F0F0] dark:bg-transparent border-2 border-[#D8D8D8] dark:input_contact py-4 px-4 md:px-8 w-full rounded-xl focus:outline-none outline-none text-black"
-                        placeholder="phone number"
+                        placeholder="Phone number"
                         name="phone"
                         value={state.phone}
                         onChange={handleChange}
@@ -162,7 +162,7 @@ export default function Index() {
                     <div>
                       <input
                         className="bg-[#F0F0F0] dark:bg-transparent border-2 border-[#D8D8D8]  py-4 px-4 md:px-8 w-full rounded-xl focus:outline-none outline-none text-black"
-                        placeholder="contact person’s name"
+                        placeholder="Contact person’s name"
                         name="name"
                         value={state.name}
                         onChange={handleChange}

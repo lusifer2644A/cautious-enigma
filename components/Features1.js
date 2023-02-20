@@ -192,7 +192,7 @@ const Features1 = () => {
   };
 
   return (
-    <div className="w-full min-h-[500px] main-light-background px-6 py-4 md:px-32 md:py-10 rounded-[0rem]">
+    <div className="w-full min-h-[500px] main-light-background dark:bg-[#880ed438] px-6 py-4 md:px-32 md:py-10 rounded-[0rem]">
       <div className="flex justify-center">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_0.8fr] w-fit items-center max-h-full gap-10 h-[480px] md:h-[450px]">
           <div className="top_text flex flex-col gap-2">

@@ -32,19 +32,42 @@ const LinkButton = ({ title, url }) => {
 
 export default function Footer() {
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
-    base("List")
-      .create([
+  function ValidateEmail(input) {
+    var validRegex =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    if (input.match(validRegex)) {
+      return true;
+    } else {
+      alert("Please enter a valid email!");
+      return false;
+    }
+  }
+
+  const handleSubmit = async (e) => {
+    if (!ValidateEmail(email)) {
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const records = await base("List").create([
         {
           fields: {
             email: email,
           },
         },
-      ])
-      .then((records) => {
-        setEmail("");
-      });
+      ]);
+
+      console.log("Air", records);
+      alert(`Hey ${email}!\nThanks for subscribing`);
+    } catch (error) {
+      console.log(error);
+    }
+
+    setLoading(false);
   };
 
   return (
@@ -66,20 +89,51 @@ export default function Footer() {
                           onClick={handleSubmit}
                           className="absolute left-[245px] pr-2 p-2 bg-accent-1 rounded-full flex items-center h-11/12 mx-auto my-2 cursor-pointer"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            className="w-5 h-5"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              strokeLinejoin="round"
-                              d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                            />
-                          </svg>
+                          {loading ? (
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              className="w-5 h-5"
+                            >
+                              <circle
+                                cx="12"
+                                cy="12"
+                                r="10"
+                                strokeWidth="2"
+                                stroke="#1d1125"
+                                strokeDasharray="50.26548245743669 50.26548245743669"
+                                fill="none"
+                                strokeLinecap="round"
+                              >
+                                <animateTransform
+                                  attributeName="transform"
+                                  type="rotate"
+                                  repeatCount="indefinite"
+                                  dur="1s"
+                                  keyTimes="0;1"
+                                  values="0 12 12;360 12 12"
+                                ></animateTransform>
+                              </circle>
+                            </svg>
+                          ) : (
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              className="w-5 h-5"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                              />
+                            </svg>
+                          )}
                         </div>
                         <input
                           id="id"
@@ -180,12 +234,12 @@ export default function Footer() {
                 </div>
                 <div className="w-fit">Privacy Policy</div>
               </div>
-              <div className="flex flex-row md:flex-col gap-1 w-fit">
+              <div className="flex flex-row md:flex-col align-end gap-1 w-fit">
                 <a
                   href="https://www.linkedin.com/company/goglocal/"
                   target="_blank"
                   rel="noreferrer"
-                  className="subtitle-3 text-accent-1 pb-2"
+                  className="subtitle-3 text-accent-1 pb-2  w-fit"
                 >
                   <svg
                     width="36"

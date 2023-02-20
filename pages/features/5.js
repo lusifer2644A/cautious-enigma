@@ -5,12 +5,15 @@ import Image from "next/future/image";
 import ThemeToggle from "../../components/ThemeToggle";
 import Link from "next/link";
 import Footer from "../../components/Footer";
+import { useRouter } from "next/router";
+
 export default function index() {
+  const router = useRouter();
   const data = {
     imageBasePath: "/asset/feature/features/",
     iconBasePath: "/asset/feature/features/icons/",
     subHeading: "International Shipping",
-    image: "05-00.png",
+    image: "06-00.png",
     title: "Pack. Store. Deliver.",
     subTitle: "International Shipping",
     heroQues: "Looking to deliver your products across the world hassle-free?",
@@ -22,21 +25,21 @@ export default function index() {
     list: [
       {
         id: 1,
-        image: "05-01.svg",
+        image: "06-01.svg",
         title: "Instant SETUP",
         description:
           "Enjoy a powerful courier network and global warehouse with instant access to pre-negotiated rates & services",
       },
       {
         id: 2,
-        image: "05-02.svg",
+        image: "05-03.svg",
         title: "OMNI CHANNEL",
         description:
           "Have an agile and flexible international supply chain with wide range of products to offer",
       },
       {
         id: 3,
-        image: "05-03.svg",
+        image: "06-03.svg",
         title: "SIMPLIFIED SHIPPING",
         description:
           "Ensure best delivery to customers and easy  returns while managing your entire shipping operation from one platform",
@@ -129,7 +132,7 @@ export default function index() {
 
               <button
                 className="btn-primary mt-10 mb-20"
-                onClick={() => router.push(link)}
+                onClick={() => router.push(data.link)}
               >
                 Get in touch
               </button>

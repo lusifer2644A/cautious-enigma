@@ -5,7 +5,10 @@ import Image from "next/future/image";
 import ThemeToggle from "../../components/ThemeToggle";
 import Link from "next/link";
 import Footer from "../../components/Footer";
+import { useRouter } from "next/router";
+
 export default function index() {
+  const router = useRouter();
   const data = {
     imageBasePath: "/asset/feature/features/",
     iconBasePath: "/asset/feature/features/icons/",
@@ -16,7 +19,7 @@ export default function index() {
     heroQues: "Are you ready for supercharge your e-commerce business?",
     description:
       "Our AI powered Strategy Engine gauges your true business potential and readiness to expand glocally. We help you become e-commerce savvy and grow exponentially.",
-    serviceTitle: "e-commerce acceleration with",
+    serviceTitle: "E-commerce acceleration with",
     serviceTitleBold: "goGLOCAL Strategy Engine ",
     link: "/connect/seller",
     list: [
@@ -129,7 +132,7 @@ export default function index() {
 
               <button
                 className="btn-primary mt-10 mb-20"
-                onClick={() => router.push(link)}
+                onClick={() => router.push(data.link)}
               >
                 Get in touch
               </button>

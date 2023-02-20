@@ -47,7 +47,7 @@ export default function Home() {
       },
     ],
     features: {
-      title: "Hassle free global exporting starts here",
+      title: "Hassle free global selling starts here",
       subtitle:
         "We offer the best, most comprehensive solutions for all your global selling needs with AI enabled, technologically advanced solutions, all in one place.",
       list: [
@@ -148,7 +148,7 @@ export default function Home() {
             </motion.div>
 
             {/* Section 2 */}
-            <div className=" px-5 md:px-10 main-light-background pt-10 md:pt-40 ">
+            <div className=" px-5 md:px-10 main-light-background dark:bg-[#880ed438] pt-10 md:pt-40 ">
               <div className="flex grid-2x2 items-around -mt-32 px-4 gap-4 h-96">
                 <div className=" h-full md:w-2/4 max-w-md relative">
                   <Image
@@ -218,7 +218,7 @@ export default function Home() {
             </div>
 
             <div className=" px-8 md:px-10  pt-16 md:pt-20 ">
-              <div className="main-heading2 heading-color2 text-center mx-auto max-w-2xl py-1 md:py-2">
+              <div className="main-heading2 heading-color2 text-center mx-auto max-w-xl py-1 md:py-2">
                 {data.features.title}
               </div>
               <div className="subtitle  headingColor text-center mx-auto max-w-3xl py-1 md:py-2">

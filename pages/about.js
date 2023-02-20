@@ -127,7 +127,7 @@ export default function Home() {
         <div className="page-bg bg-[#AC2EED29] z-[10] static z-[1]">
           <div className="page-container main ">
             {/* Hero Section */}
-            <div className=" pt-10 pb-5 md:pb-12 px-5 md:px-10 dark:bg-gradient-to-b from-[#692E98] to-transparent">
+            <div className=" pt-10 pb-5 md:pb-12 px-5 md:px-10 dark:bg-gradient-to-b from-[#692E98] to-[#880ed438] rounded-t-[2rem]">
               <motion.div
                 // initial={{ opacity: 0, y: 10 }}
                 // animate={{ opacity: 1, y: 0 }}
@@ -153,7 +153,7 @@ export default function Home() {
               </motion.div>
             </div>
 
-            <motion.div className="main-light-background px-12 py-5 rounded-[0rem]">
+            <motion.div className="main-light-background dark:bg-[#880ed438] px-12 py-5 rounded-[0rem]">
               <div className="md:pt-8 px-8">
                 <motion.div
                   initial={{ opacity: 0, y: 100 }}

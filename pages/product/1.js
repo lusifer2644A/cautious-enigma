@@ -127,24 +127,24 @@ export default function Index() {
                 </div>
               </div>
             </div>
-            <div className="container mx-auto flex items-center flex-row pt-6 gap-8 flex-wrap justify-center mt-10">
-              <div className="shadow-lg min-h-[150px]  md:min-h-[260px]  w-full max-w-[350px] body-3  product_box2 md:body-2 box_drop_shadow text-center bg-white h-full py-8 md:py-12 px-6 rounded-2xl">
+            <div className=" mx-auto flex items-center flex-row pt-6 gap-2 xl:gap-8 flex-wrap justify-center mt-10">
+              <div className="shadow-lg min-h-[150px]  md:min-h-[260px]  w-full max-w-[320px] medium-text product_box2 box_drop_shadow text-center bg-white h-full py-8 md:py-12 px-6 rounded-2xl">
                 Extend and customise your global selling from strategy,
                 marketplace, logistics, payments, order management at all from
                 one dashboard.
               </div>
-              <div className="rounded-full bg-[#2B2033] w-[30px] h-[30px] flex items-center justify-center">
-                <div className="rounded-full bg-[#ffffff] dark:bg-[#1d1125] w-[15px] h-[15px] "></div>
+              <div className="rounded-full bg-[#2B2033]  w-[30px] h-[30px] flex items-center justify-center">
+                <div className="rounded-full bg-[#ffffff]  w-[15px] h-[15px] "></div>
               </div>
-              <div className="shadow-lg min-h-[150px]  md:min-h-[260px]  w-full max-w-[350px] body-3  product_box2 md:body-2 box_drop_shadow text-center bg-white h-full py-8 md:py-12 px-6 rounded-2xl">
+              <div className="shadow-lg min-h-[150px]  md:min-h-[260px]  w-full max-w-[320px] medium-text product_box2 box_drop_shadow text-center bg-white h-full py-8 md:py-12 px-6 rounded-2xl">
                 Get access to our certified Seller Enabler Network with ready
                 made solutions and customised offerings to manage all your
                 global e-commerce needs.
               </div>
               <div className="rounded-full bg-[#2B2033] w-[30px] h-[30px] flex items-center justify-center">
-                <div className="rounded-full bg-[#ffffff] dark:bg-[#1d1125] w-[15px] h-[15px] "></div>
+                <div className="rounded-full bg-[#ffffff]  w-[15px] h-[15px] "></div>
               </div>
-              <div className="shadow-lg min-h-[150px]  md:min-h-[260px]  w-full max-w-[350px] body-3  product_box2 md:body-2 box_drop_shadow text-center bg-white h-full py-8 md:py-12 px-6 rounded-2xl">
+              <div className="shadow-lg min-h-[150px]  md:min-h-[260px]  w-full max-w-[320px] medium-text product_box2 box_drop_shadow text-center bg-white h-full py-8 md:py-12 px-6 rounded-2xl">
                 Custom solutions by leveraging your existing CMS, OMS and WMS in
                 the Seller Central for a seamless set up.
               </div>
@@ -152,7 +152,7 @@ export default function Index() {
 
             {/* Section 2 */}
             <div className="main-heading2 headingColor2 text-justify md:text-center  max-w-6xl mx-auto pt-36 ">
-              Global Check-In & Check-out Features
+              Seller Central Features
             </div>
             <div className="flex justify-center">
               <div className="flex flex-row flex-wrap gap-8 justify-center py-10 max-w-[1500px]">
@@ -160,7 +160,7 @@ export default function Index() {
                   return (
                     <div
                       key={`product_${idx}`}
-                      className="flex flex-col items-center justify-start w-[80%] max-w-[400px] min-h-[500px] px-5 py-10 pr_rad_grad shadow-lg rounded-2xl"
+                      className="flex flex-col items-center justify-start w-[80%] max-w-[360px] min-h-[500px] px-5 py-10 pr_rad_grad shadow-lg rounded-[2rem]"
                     >
                       <div className="w-full">
                         <div className="w-60 h-60 my-5 flex items-center justify-center mx-auto relative">
@@ -182,7 +182,7 @@ export default function Index() {
                           <div className="image_background_gradient3"></div>
                         </div>
                       </div>
-                      <div className="heading-4 leading-snug heading-color text-center mt-5">
+                      <div className="heading-4 leading-snug heading-color text-center mt-5 h-10">
                         {feat.name}
                       </div>
                       <div className="flex flex-col gap-3 justify-center items-center mt-10 w-[70%]">
@@ -190,13 +190,13 @@ export default function Index() {
                           return field.link ? (
                             <div
                               key={`field_${idx}`}
-                              className="w-full bg-[#FFFFFF] caption-text text-[#401255] rounded-2xl px-4 py-3 text-center font-medium cursor-pointer"
+                              className="w-full bg-[#FFFFFF] dark:bg-[#00000030] caption-text text-[#401255] rounded-2xl px-4 py-3 text-center font-medium cursor-pointer"
                               onClick={() => router.push(field.link)}
                             >
                               {field.title}
                             </div>
                           ) : (
-                            <div className="w-full bg-[#FFFFFF] caption-text text-[#401255] rounded-2xl px-4 py-3 text-center font-medium">
+                            <div className="w-full bg-[#FFFFFF] dark:bg-[#00000030] caption-text text-[#401255] rounded-2xl px-4 py-3 text-center font-medium">
                               {field.title}
                             </div>
                           );

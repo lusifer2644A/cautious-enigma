@@ -47,6 +47,27 @@ export default function Index() {
     }
   }, [formErrors]);
 
+  function ValidateEmail(input) {
+    var validRegex =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    if (input.match(validRegex)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function ValidatePhone(input) {
+    var phoneno =
+      /(?:\s+|)((0|(?:(\+|)91))(?:\s|-)*(?:(?:\d(?:\s|-)*\d{9})|(?:\d{2}(?:\s|-)*\d{8})|(?:\d{3}(?:\s|-)*\d{7}))|\d{10})(?:\s+|)/;
+    if (input.match(phoneno)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   const validate = (values) => {
     const errors = {};
 
@@ -60,10 +81,14 @@ export default function Index() {
 
     if (!values.phone) {
       errors.phone = "Phone Number is required!";
+    } else if (!ValidatePhone(values.phone)) {
+      errors.phone = "Please enter a valid phone number!";
     }
 
     if (!values.email) {
       errors.email = "Email is required!";
+    } else if (!ValidateEmail(values.email)) {
+      errors.email = "Please enter a valid email!";
     }
 
     return errors;
@@ -142,7 +167,7 @@ export default function Index() {
                     <div>
                       <input
                         className="bg-[#F0F0F0] dark:bg-transparent border-2 border-[#D8D8D8] py-4 px-4 md:px-8 w-full rounded-xl focus:outline-none outline-none text-black"
-                        placeholder="your company’s name"
+                        placeholder="Your company’s name"
                         name="company"
                         value={state.company}
                         onChange={handleChange}
@@ -152,7 +177,7 @@ export default function Index() {
                     <div>
                       <input
                         className="bg-[#F0F0F0] dark:bg-transparent border-2 border-[#D8D8D8] py-4 px-4 md:px-8 w-full rounded-xl focus:outline-none outline-none text-black"
-                        placeholder="email"
+                        placeholder="Email"
                         name="email"
                         value={state.email}
                         onChange={handleChange}
@@ -162,7 +187,7 @@ export default function Index() {
                     <div>
                       <input
                         className="bg-[#F0F0F0] dark:bg-transparent border-2 border-[#D8D8D8] dark:input_contact py-4 px-4 md:px-8 w-full rounded-xl focus:outline-none outline-none text-black"
-                        placeholder="phone number"
+                        placeholder="Phone number"
                         name="phone"
                         value={state.phone}
                         onChange={handleChange}
@@ -172,7 +197,7 @@ export default function Index() {
                     <div>
                       <input
                         className="bg-[#F0F0F0] dark:bg-transparent border-2 border-[#D8D8D8]  py-4 px-4 md:px-8 w-full rounded-xl focus:outline-none outline-none text-black"
-                        placeholder="contact person’s name"
+                        placeholder="Contact person’s name"
                         name="name"
                         value={state.name}
                         onChange={handleChange}

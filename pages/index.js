@@ -26,7 +26,8 @@ export default function Home() {
       title: "Unlock Global Potential For Your Brand.",
       subtitle:
         "India’s most comprehensive tech platform for global e-commerce",
-      image: "Hero-light-2.png",
+      image:
+        "https://res.cloudinary.com/dzekclpeu/image/upload/v1676895629/goglocal/asset/Hero-light-2_z3cf0p.png",
     },
     cta: {
       image: "/hero/home-cta.png",
@@ -209,7 +210,7 @@ export default function Home() {
                 <div className="w-full h-full max-h-full flex items-center justify-center mx-auto  ">
                   <Image
                     className="w-fit h-full object-contain z-10 max-h-full"
-                    src={`/asset/${data.hero.image}`}
+                    src={`${data.hero.image}`}
                     alt="hero image"
                     loading="lazy"
                     width="2000"
@@ -220,7 +221,7 @@ export default function Home() {
               </div>
             </div>
             {/* vision and mission */}
-            <div className="w-full min-h-[30rem] flex flex-col md:flex-row justify-center main-light-background text-gray-50 overflow-y-hidden items-center gap-4 md:gap-32 lg:gap-56 xl:gap-72 px-5 py-10 lg:px-20 lg:py-10">
+            <div className="w-full min-h-[30rem] flex flex-col md:flex-row justify-center main-light-background dark:bg-[#880ed438] text-gray-50 overflow-y-hidden items-center gap-4 md:gap-32 lg:gap-56 xl:gap-72 px-5 py-10 lg:px-20 lg:py-10">
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -419,7 +420,7 @@ export default function Home() {
             </div>
 
             {/* integrations */}
-            <div className="w-full min-h-[30rem] rounded-[0rem] md:mt-20 flex flex-col justify-center main-light-background text-gray-50 overflow-y-hidden items-center  px-5 py-5 lg:px-20 lg:py-10">
+            <div className="w-full min-h-[30rem] rounded-[0rem] md:mt-20 flex flex-col justify-center main-light-background dark:bg-[#880ed438] text-gray-50 overflow-y-hidden items-center  px-5 py-5 lg:px-20 lg:py-10">
               <h2 className="main-heading2 heading-color2">Integrations</h2>
               <p className="subtitle mt-2 heading-color2">
                 Committed to your success
@@ -428,10 +429,10 @@ export default function Home() {
               <div className="flex flex-row flex-wrap gap-4 justify-center items-center py-8 sm:px-8 w-full lg:w-full">
                 {data.integrations.list.map((item, index) => (
                   <div
-                    class="flex flex-col  sm:flex-row gap-x-8 gap-y-5 bg-[#ffffff] w-fit shadow-lg rounded-xl px-6 py-8 h-full"
+                    class="flex flex-col  sm:flex-row gap-x-8 gap-y-5 bg-[#ffffff] dark:bg-[#ac2eed29] w-fit shadow-lg rounded-xl px-6 py-8 h-full"
                     key={index}
                   >
-                    <div class="row-span-3 flex justify-center">
+                    <div class="dark:hidden flex justify-center">
                       <svg
                         width="54"
                         height="50"
@@ -440,6 +441,17 @@ export default function Home() {
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path fill="#1d1125" d={item.svgPath} />
+                      </svg>
+                    </div>
+                    <div class="hidden dark:block flex justify-center">
+                      <svg
+                        width="54"
+                        height="50"
+                        viewBox="0 0 54 50"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path fill="#ffffff" d={item.svgPath} />
                       </svg>
                     </div>
                     <div className="flex flex-col gap-5">

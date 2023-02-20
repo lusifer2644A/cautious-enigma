@@ -82,7 +82,7 @@ export default function Header() {
               <div
                 className={
                   router.pathname === "/about"
-                    ? "small-text font-medium text-[#1D1125] cursor-pointer tracking-wider"
+                    ? "small-text font-medium text-[#1D1125] dark:text-[#ffffff] dark:font-semibold cursor-pointer tracking-wider"
                     : "small-text font-medium text-dark-2 dark:text-light-2 hover:text-[#1D1125] cursor-pointer tracking-wider"
                 }
               >
@@ -101,7 +101,7 @@ export default function Header() {
                   <span
                     className={
                       router.pathname == "/products"
-                        ? "small-text font-medium text-[#1D1125] cursor-pointer tracking-wider"
+                        ? "small-text font-medium text-[#1D1125] dark:text-[#ffffff] dark:font-semibold cursor-pointer tracking-wider"
                         : "small-text font-medium text-dark-2 dark:text-light-2 hover:text-[#1D1125] cursor-pointer tracking-wider"
                     }
                   >
@@ -132,7 +132,7 @@ export default function Header() {
                   className={
                     flyer
                       ? " opacity-100 translate-y-0 transition ease-out duration-200 absolute z-10 bg-white mt-4 transform px-2 w-max max-w-sm sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
-                      : " opacity-0 pointer-none translate-y-1 absolute z-10  mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                      : " opacity-0 pointer-none translate-y-1 absolute z-10  mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2 pointer-events-none"
                   }
                 >
                   <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
@@ -165,7 +165,7 @@ export default function Header() {
               <div
                 className={
                   router.pathname == "/service"
-                    ? "small-text font-medium text-[#1D1125] cursor-pointer tracking-wider"
+                    ? "small-text font-medium text-[#1D1125] dark:text-[#ffffff] dark:font-semibold cursor-pointer tracking-wider"
                     : "small-text font-medium text-dark-2 dark:text-light-2 hover:text-[#1D1125] cursor-pointer tracking-wider"
                 }
               >
@@ -175,14 +175,14 @@ export default function Header() {
               <div
                 className={
                   router.pathname == "/careers"
-                    ? "small-text font-medium text-[#1D1125] cursor-pointer tracking-wider"
+                    ? "small-text font-medium text-[#1D1125] dark:text-[#ffffff] dark:font-semibold  cursor-pointer tracking-wider"
                     : "small-text font-medium text-dark-2 dark:text-light-2 hover:text-[#1D1125] cursor-pointer tracking-wider"
                 }
               >
                 <Link href="/careers">CAREERS</Link>
               </div>
               <Link href="/login">
-                <p className="ml-8 cursor-pointer whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-full shadow-sm small-text tracking-wider font-medium text-black accent-grad">
+                <p className="ml-8 cursor-pointer whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-full shadow-sm small-text tracking-wider font-medium text-black dark:text-black accent-grad">
                   SIGN IN
                 </p>
               </Link>

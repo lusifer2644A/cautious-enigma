@@ -9,7 +9,7 @@ import { RoundedButton } from "../components/button/RoundedButton";
 import Footer from "../components/Footer";
 import Header from "./../components/Header";
 
-export default function careers() {
+const careers = () => {
   const router = useRouter();
   const data = {
     title: "Growing and going far together",
@@ -134,6 +134,7 @@ export default function careers() {
                 </div>
               </div>
             </div>
+
             <div className="flex justify-center py-6">
               <div className="flex flex-row flex-wrap w-full gap-10 items-center mt-10 w-fit">
                 <div className="flex flex-col gap-5">
@@ -157,7 +158,7 @@ export default function careers() {
               </div>
             </div>
 
-            <div className="main-light-background rounded-[0rem] py-10 px-4">
+            <div className="main-light-background dark:bg-[#880ed438] rounded-[0rem] py-10 px-4">
               <div className=" main-heading2 headin-color2 text-center py-4">
                 What we believe in
               </div>
@@ -335,7 +336,7 @@ export default function careers() {
               </div>
             </div>
 
-            <div className="main-light-background rounded-[0rem] py-10 px-4 mt-20">
+            <div className="main-light-background dark:bg-[#880ed438] rounded-[0rem] py-10 px-4 mt-20">
               <div className=" main-heading2 headin-color2 text-center py-4">
                 Superhero Crew Selection
               </div>
@@ -349,7 +350,7 @@ export default function careers() {
                   {selection_data.map((d, idx) => {
                     return (
                       <div
-                        className="w-full max-w-[600px] h-auto grid grid-cols-[1fr_0.7fr] gap-5 justify-center p-5 bg-[#ffffff] shadow-lg rounded-lg"
+                        className="w-full max-w-[600px] h-auto grid grid-cols-[1fr_0.7fr] gap-5 justify-center p-5 bg-[#ffffff] dark:bg-[#ac2eed29] shadow-lg rounded-lg"
                         key={idx}
                       >
                         <div className="flex flex-col gap-3">
@@ -411,4 +412,6 @@ export default function careers() {
       </main>
     </>
   );
-}
+};
+
+export default careers;
