@@ -22,7 +22,7 @@ const LinkButton = ({ title, url }) => {
       }}
     >
       <Link href={url}>
-        <p className="text-[#A6A6A6] cursor-pointer text-base font-body py-2">
+        <p className="text-[#A6A6A6] cursor-pointer body-main-text  py-2">
           {title}
         </p>
       </Link>
@@ -35,6 +35,10 @@ export default function Footer() {
   const [loading, setLoading] = useState(false);
 
   function ValidateEmail(input) {
+    if (!input) {
+      return alert("Please enter the email");
+    }
+
     var validRegex =
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
@@ -149,7 +153,7 @@ export default function Footer() {
                     </div>
                   </span>
                 </div>
-                <div className="flex flex-row items-start justify-start flex-wrap  lg:w-fit gap-x-12 md:gap-x-12 lg:gap-x-12 xl:gap-x-20 gap-y-10 ">
+                <div className="flex flex-row items-start justify-center md:justify-start flex-wrap  lg:w-fit gap-x-12 md:gap-x-12 lg:gap-x-12 xl:gap-x-20 gap-y-10 ">
                   <div className="flex flex-col w-fit">
                     <LinkButton url="/about" title="About" />
                     <LinkButton url="/products" title="Products" />

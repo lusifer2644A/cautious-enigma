@@ -12,7 +12,7 @@ export default function Index() {
   const data = {
     imageBasePath: "/asset/feature/features/",
     iconBasePath: "/asset/feature/features/icons/",
-    subHeading: "B2B Sourcing",
+    subTitle: "B2B Sourcing",
     image: "09-00.png",
     title: "Network. Source. Earn.",
     heroQues:

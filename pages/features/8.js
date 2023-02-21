@@ -12,7 +12,7 @@ export default function Index() {
   const data = {
     imageBasePath: "/asset/feature/features/",
     iconBasePath: "/asset/feature/features/icons/",
-    subHeading: "Global Payments",
+    subTitle: "Global Payments",
     image: "08-00.png",
     title: "Sell. Transfer. Save.",
     heroQues:

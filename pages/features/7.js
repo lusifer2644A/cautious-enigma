@@ -12,7 +12,7 @@ export default function Index() {
   const data = {
     imageBasePath: "/asset/feature/features/",
     iconBasePath: "/asset/feature/features/icons/",
-    subHeading: "Trade Compliance ",
+    subTitle: "Trade Compliance ",
     image: "07-00.png",
     title: "Comply. Expand. Relax.",
     heroQues:

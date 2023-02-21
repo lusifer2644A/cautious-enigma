@@ -174,7 +174,7 @@ export default function Home() {
         <div className="page-bg z-[10] static">
           <div className="page-container main ">
             {/* Hero Section */}
-            <div className="w-full md:h-[50rem] overflow-y-hidden flex flex-row justify-center items-start gap-5 md:gap-10 xl:gap-36 px-5 py-12 md:px-5 md:py-5 lg:px-20 lg:py-10">
+            <div className="w-full md:h-[50rem] overflow-y-hidden flex flex-col md:flex-row justify-center items-start gap-5 md:gap-10 xl:gap-24 px-5 py-5 md:px-5 md:py-5 lg:px-20 lg:py-10">
               <div className="flex flex-col gap-5 w-fit max-w-lg pt-[5%]">
                 <motion.h1
                   initial={{ opacity: 0, y: 100 }}
@@ -196,7 +196,7 @@ export default function Home() {
                   initial={{ opacity: 0, y: 100 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.6 }}
-                  className="flex flex-row items-center gap-4 pt-6"
+                  className="flex flex-row items-center gap-4 pt-2 md:pt-6"
                 >
                   <button
                     className="btn-primary"
@@ -271,9 +271,11 @@ export default function Home() {
               </div>
             </div>
             {/* Why goglocal */}
-            <div className="flex justify-center flex-col items-center px-2 py-12">
+            <div className="flex justify-center flex-col items-center px-2 py-6 md:py-12">
               <h2 className="main-heading2">Why goGlocal?</h2>
-              <p className="subtitle mt-2">Hassle free exporting starts here</p>
+              <p className="subtitle md:mt-2">
+                Hassle free exporting starts here
+              </p>
 
               {data.features.list.map((feature, index) => {
                 return (
@@ -329,19 +331,19 @@ export default function Home() {
             </div>
 
             {/* products */}
-            <div className="flex justify-center flex-col items-center px-2 py-12">
+            <div className="flex justify-center flex-col items-center px-2 py-6 md:py-12">
               <h2 className="main-heading2">Our Products</h2>
-              <p className="subtitle mt-2 text-center">
+              <p className="subtitle md:mt-2 text-center">
                 Converting the world into one big shopping mall with our
                 PRODUCTS
               </p>
 
-              <div className="flex flex-row flex-wrap items-center justify-center gap-10 mt-10">
+              <div className="flex flex-row flex-wrap items-center justify-center gap-6 md:gap-10 mt-5 md:mt-10">
                 {data.product.list.map((pr, index) => {
                   return (
                     <div
                       key={index}
-                      className={`flex flex-col items-center flex-wrap rounded-[30px] shadow-xl px-[30px] py-[40px] w-4/5 md:w-full max-w-[350px] gap-5`}
+                      className={`flex flex-col items-center flex-wrap rounded-[30px] shadow-xl px-[30px] py-[40px] w-4/5 md:w-full max-w-[350px] gap-3 md:gap-5`}
                     >
                       <div className="w-full ">
                         <Image
@@ -369,11 +371,11 @@ export default function Home() {
             </div>
 
             {/* programs */}
-            <div className="flex justify-center flex-col items-center px-5 md:px-2 py-12">
+            <div className="flex justify-center flex-col items-center px-5 md:px-2 py-6 md:py-12">
               <h2 className="main-heading2">Our Programs</h2>
-              <p className="subtitle mt-2">Something for everyone</p>
+              <p className="subtitle md:mt-2">Something for everyone</p>
 
-              <p className="subtitle font-noto mt-16 text-[#463C4B] text-center">
+              <p className="subtitle font-noto mt-6 md:mt-16 text-[#463C4B] text-center">
                 If you have a desire to take your brand global, we have a
                 program for you
               </p>
@@ -420,13 +422,13 @@ export default function Home() {
             </div>
 
             {/* integrations */}
-            <div className="w-full min-h-[30rem] rounded-[0rem] md:mt-20 flex flex-col justify-center main-light-background dark:bg-[#880ed438] text-gray-50 overflow-y-hidden items-center  px-5 py-5 lg:px-20 lg:py-10">
+            <div className="w-full min-h-[30rem] rounded-[0rem] md:mt-20 flex flex-col justify-center main-light-background dark:bg-[#880ed438] text-gray-50 overflow-y-hidden items-center  px-5 py-5 lg:px-10 lg:py-10">
               <h2 className="main-heading2 heading-color2">Integrations</h2>
-              <p className="subtitle mt-2 heading-color2">
+              <p className="subtitle md:mt-2 heading-color2">
                 Committed to your success
               </p>
 
-              <div className="flex flex-row flex-wrap gap-4 justify-center items-center py-8 sm:px-8 w-full lg:w-full">
+              <div className="flex flex-row flex-wrap gap-4 justify-center items-center py-8 sm:px-2 w-full">
                 {data.integrations.list.map((item, index) => (
                   <div
                     class="flex flex-col  sm:flex-row gap-x-8 gap-y-5 bg-[#ffffff] dark:bg-[#ac2eed29] w-fit shadow-lg rounded-xl px-6 py-8 h-full"
@@ -468,9 +470,9 @@ export default function Home() {
             </div>
 
             {/* careers */}
-            <div className="flex justify-center flex-col items-center px-2 py-12">
+            <div className="flex justify-center flex-col items-center px-2 py-6 md:py-12">
               <h2 className="main-heading2">Careers @ goGLOCAL</h2>
-              <p className="subtitle mt-2">Growing & going far together</p>
+              <p className="subtitle md:mt-2">Growing & going far together</p>
 
               <div className="flex flex-col-reverse md:flex-row justify-center items-center mx-auto gap-4 md:gap-8 pt-8 px-4">
                 <div className="w-full md:w-2/4 max-w-[600px] flex flex-col items-center md:items-start justify-start gap-4">
