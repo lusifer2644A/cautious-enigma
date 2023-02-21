@@ -9,7 +9,7 @@ import { RoundedButton } from "../components/button/RoundedButton";
 import Footer from "../components/Footer";
 import Header from "./../components/Header";
 
-const careers = () => {
+const Careers = () => {
   const router = useRouter();
   const data = {
     title: "Growing and going far together",
@@ -414,4 +414,4 @@ const careers = () => {
   );
 };
 
-export default careers;
+export default Careers;

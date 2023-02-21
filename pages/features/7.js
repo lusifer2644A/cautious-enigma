@@ -7,7 +7,7 @@ import Link from "next/link";
 import Footer from "../../components/Footer";
 import { useRouter } from "next/router";
 
-export default function index() {
+export default function Index() {
   const router = useRouter();
   const data = {
     imageBasePath: "/asset/feature/features/",
