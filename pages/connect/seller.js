@@ -126,8 +126,8 @@ export default function Index() {
         <div className="page-bg bg-[#AC2EED29] z-[10] static z-[1]">
           <div className="page-container main mb-10">
             {/* hero */}
-            <div className="flex flex-col justify-center  items-center py-40 px-5">
-              <h1 className="main-heading headingColor2 text-center">
+            <div className="flex flex-col justify-center  items-center py-16 md:py-40 px-5">
+              <h1 className="main-heading2 md:main-heading headingColor2 text-center">
                 Let’s work together
               </h1>
               <h1 className="subtitle text-center pt-4 max-w-[700px]  mt-5">
@@ -137,33 +137,33 @@ export default function Index() {
                 with us.
               </h1>
             </div>
-            <div className="bg-[#1D1125] py-20 px-12 rounded-b-[2rem]">
-              <div className="flex flex-row gap-10 justify-center items-center flex-wrap">
+            <div className="bg-[#1D1125] py-20 px-6 md:px-12 rounded-b-[2rem]">
+              <div className="flex flex-row gap-10 md:gap-10 justify-center items-center flex-wrap">
                 {/* left  section */}
-                <div className="flex flex-col gap-8 max-w-xl">
-                  <p className="heading-1 heading-color max-w-sm">
+                <div className="flex flex-col gap-4 md:gap-8 max-w-xl">
+                  <p className="heading-1 heading-color max-w-sm text-center md:text-start">
                     Become a goGLOCAL Partner
                   </p>
-                  <p className="subtitle2 heading-color">
+                  <p className="subtitle2 heading-color text-center md:text-start">
                     Skyrocket your business today
                   </p>
-                  <p className="subtitle heading-color">
+                  <p className="subtitle heading-color text-center md:text-start">
                     Our broad selection of local and international marketplaces
                     will help connect your store to millions of consumers and
                     grow internationally.
                   </p>
-                  <p className="subtitle heading-color">
+                  <p className="subtitle heading-color text-center md:text-start">
                     We are looking to onboard partners who can help provide a
                     smoother global e-commerce experience.
                   </p>
                 </div>
 
                 {/* right section */}
-                <div className="flex flex-col gap-10 justify-center items-center max-w-xl ">
+                <div className="flex flex-col gap-5 md:gap-10 justify-center items-center max-w-xl ">
                   <p className="subtitle2 heading-color">
                     Get in touch with us
                   </p>
-                  <div className="flex flex-col gap-5 justify-center ">
+                  <div className="flex flex-col gap-3 md:gap-5 justify-center ">
                     <div>
                       <input
                         className="bg-[#F0F0F0] dark:bg-transparent border-2 border-[#D8D8D8] py-4 px-4 md:px-8 w-full rounded-xl focus:outline-none outline-none text-black"
