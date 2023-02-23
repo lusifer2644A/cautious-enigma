@@ -146,14 +146,14 @@ export default function Home() {
                   initial={{ opacity: 0, y: 100 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.7 }}
-                  className="subtitle headingColor leading-relax max-w-4xl mx-auto text-justify md:text-center pt-8"
+                  className="subtitle headingColor leading-relax max-w-4xl mx-auto text-justify md:text-center pt-2 md:pt-8"
                 >
                   {data.subTitle}
                 </motion.h1>
               </motion.div>
             </div>
 
-            <motion.div className="main-light-background dark:bg-[#880ed438] px-12 py-5 rounded-[0rem]">
+            <motion.div className="main-light-background dark:bg-[#880ed438] px-4 md:px-12 py-5 rounded-[0rem]">
               <div className="md:pt-8 px-8">
                 <motion.div
                   initial={{ opacity: 0, y: 100 }}
@@ -161,8 +161,8 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 1.2 }}
                   className="flex flex-col  md:flex-row items-center  gap-8 justify-center mx-auto "
                 >
-                  <div className="md:w-1/2">
-                    <p className="subtitle heading-color22 text-justify ">
+                  <div className="w-full md:w-1/2">
+                    <p className="subtitle heading-color2 text-justify ">
                       <ul class="list-disc subtitle heading-color22 dark:text-white max-w-xl font-noto">
                         <li>
                           Solving core global trade problems faced by business
@@ -191,7 +191,7 @@ export default function Home() {
                 </motion.div>
               </div>
 
-              <div className="heading-1 heading-color22 text-center pt-40">
+              <div className="heading-1 heading-color2 text-center pt-16 md:pt-40">
                 {data.why_we_exist.title}
               </div>
               <div className="flex flex-row gap-2 justify-center items-center">
@@ -222,13 +222,13 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="heading-4 heading-color22 font-light italic tracking-wide font-bold max-w-2xl mx-auto text-center  py-12">
+              <div className="heading-4 heading-color2 font-light italic tracking-wide font-bold max-w-2xl mx-auto text-center  py-2 md:py-12">
                 {data.why_we_exist.subTitle}
               </div>
               <div className="md:pt-8">
                 <div className="flex flex-col  md:flex-row items-center gap-4  justify-center mx-auto ">
                   <div className="md:w-4/12 relative">
-                    <div className=" mx-auto ">
+                    <div className="mx-auto ">
                       <Image
                         src={`${data.imageBasePath}${data.why_we_exist.image}`}
                         alt="cta_image"
@@ -244,7 +244,7 @@ export default function Home() {
                   </div>
                   <div className="md:w-fit">
                     <div className="flex flex-col  items-start justify-center gap-4">
-                      <div className="flex flex-row gap-2 items-center justify-center text-justify heading-5 font-normal font-noto heading-color22">
+                      <div className="flex flex-row gap-2 items-center justify-center md:text-justify heading-5 font-normal font-noto heading-color22">
                         <p>
                           <svg
                             width="33"
@@ -270,7 +270,7 @@ export default function Home() {
                           </span>
                         </p>
                       </div>
-                      <div className="flex flex-row gap-2 items-center justify-center heading-5 font-normal font-noto heading-color2 text-justify ">
+                      <div className="flex flex-row gap-2 items-center justify-center heading-5 font-normal font-noto heading-color2 md:text-justify ">
                         <p>
                           <svg
                             width="33"
@@ -295,7 +295,7 @@ export default function Home() {
                           low investment.
                         </p>
                       </div>{" "}
-                      <div className="flex flex-row gap-2 items-center justify-center heading-5 font-normal font-noto heading-color2 text-justify">
+                      <div className="flex flex-row gap-2 items-center justify-center heading-5 font-normal font-noto heading-color2 md:text-justify">
                         <p>
                           <svg
                             width="33"
@@ -322,7 +322,7 @@ export default function Home() {
                           </span>
                         </p>
                       </div>{" "}
-                      <div className="flex flex-row gap-2 items-center justify-center heading-5 font-normal font-noto heading-color2 text-justify">
+                      <div className="flex flex-row gap-2 items-center justify-center heading-5 font-normal font-noto heading-color2 md:text-justify">
                         <p>
                           <svg
                             width="33"
@@ -346,7 +346,7 @@ export default function Home() {
                           {"  "} and customs.
                         </p>
                       </div>{" "}
-                      <div className="flex flex-row gap-2 items-center justify-center heading-5 font-normal font-noto heading-color2 text-justify">
+                      <div className="flex flex-row gap-2 items-center justify-center heading-5 font-normal font-noto heading-color2 md:text-justify">
                         <p>
                           <svg
                             width="33"
@@ -373,7 +373,7 @@ export default function Home() {
                           <span className="font-bold"> FX rate.</span>
                         </p>
                       </div>{" "}
-                      <div className="flex flex-row gap-2 items-center justify-center heading-5 font-normal font-noto heading-color2 text-justify">
+                      <div className="flex flex-row gap-2 items-center justify-center heading-5 font-normal font-noto heading-color2 md:text-justify">
                         <p>
                           <svg
                             width="33"
@@ -411,10 +411,10 @@ export default function Home() {
                   {data.who_we_are.title}
                 </div>
 
-                <div className="heading-4 heading-color2 font-light italic tracking-wide font-bold max-w-2xl mx-auto text-center  py-12">
+                <div className="heading-4 heading-color2 font-light italic tracking-wide font-bold max-w-2xl mx-auto text-center  py-2 md:py-12">
                   {data.who_we_are.subTitle}
                 </div>
-                <div className="md:pt-8">
+                <div className="pt-4 md:pt-8">
                   <div className="flex flex-col  md:flex-row items-center justify-center mx-auto ">
                     <div className="md:w-1/2">
                       <p className="medium-text heading-color2 text-center md:text-start max-w-xl">
@@ -442,13 +442,13 @@ export default function Home() {
               <div className="main-heading2 heading-color22 py-4 text-center mx-auto">
                 The Team
               </div>
-              <div className="pt-8 pb-40 w-full">
-                <div className="flex-3x3-team w-full">
+              <div className="pt-0 pb-2 md:pt-8 md:pb-40 w-full">
+                <div className="flex-3x3-team">
                   {data.team.map((item, index) => (
                     <div className="w-full md:w-1/3 lg:w-1/4 py-4" key={index}>
                       <a href={item.linkedin} target="_blank" rel="noreferrer">
                         <div className="flex flex-col items-start justify-start relative">
-                          <div className="flex flex-col justify-center items-center w-full z-10">
+                          <div className="flex flex-col justify-start items-center w-full z-10">
                             <motion.div
                               whileHover={{
                                 scale: 1.05,
@@ -466,7 +466,7 @@ export default function Home() {
                                 loading="lazy"
                               />
                             </motion.div>
-                            <div className="heading-4 heading-color22 text-center pt-2">
+                            <div className="heading-4 heading-color22 text-center pt-2 h-16 md:h-auto">
                               {item.name}
                             </div>
                             <div className="subtitle text-center leading-snug headingColor">

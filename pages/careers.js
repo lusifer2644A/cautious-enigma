@@ -50,9 +50,9 @@ const Careers = () => {
     return (
       // <Link href={link}>
       <div className="relative">
-        <div className="postition_button_bg_22"></div>
-        <div className=" w-60  py-8 postition_button_bg_2 text-black rounded-2xl  text-center">
-          <p className="body-intro-text heading-color">{text}</p>
+        <div className="postition_button_bg_22_mobile md:postition_button_bg_22"></div>
+        <div className="w-40 md:w-60 py-4 md:py-8 postition_button_bg_2_mobile md:postition_button_bg_2  text-center">
+          <p className="body-intro-text">{text}</p>
         </div>
       </div>
       // </Link>
@@ -124,8 +124,8 @@ const Careers = () => {
         <div className="page-bg bg-[#AC2EED29] z-[10] static">
           <div className="page-container main ">
             {/* Hero Section */}
-            <div className="flex flex-col gap-[20px] items-center justify-center px-5 py-10 pt-32">
-              <div className="main-heading headingColor2 text-justify md:text-center mx-auto  ">
+            <div className="flex flex-col gap-[20px] items-center justify-center px-5 py-10 pt-12 md:pt-32">
+              <div className="main-heading2  headingColor2 text-center md:text-center mx-auto  ">
                 {data.title}
               </div>
               <div>
@@ -135,7 +135,8 @@ const Careers = () => {
               </div>
             </div>
 
-            <div className="flex justify-center py-6">
+            {/* s2 - desktop */}
+            <div className="hidden md:flex justify-center px-0 py-6">
               <div className="flex flex-row flex-wrap w-full gap-10 items-center mt-10 w-fit">
                 <div className="flex flex-col gap-5">
                   <div className="heading-2 heading-color2  ">
@@ -157,17 +158,42 @@ const Careers = () => {
                 </div>
               </div>
             </div>
+            {/* s2 - modile */}
+            <div className="flex md:hidden justify-center px-4 py-6">
+              <div className="flex flex-row flex-wrap w-full gap-10 items-center justify-center mt-10 w-fit">
+                <div className="flex flex-col gap-5">
+                  <div className="heading-2 heading-color2  text-center">
+                    Why you should join us?
+                  </div>
+                  <div className="relative flex items-center justify-center ">
+                    <Image
+                      className="w-60 md:w-96 h-full "
+                      src={`${data.imageBasePath}01.png`}
+                      alt="hero image"
+                      loading="lazy"
+                      width="200"
+                      height="400"
+                      // objectFit="cover"
+                    />
+                    <div className="image_background_gradient z-9"></div>
+                  </div>
+                  <div className="subtitle max-w-lg font-noto text-center">
+                    {data.cta}
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div className="main-light-background dark:bg-[#880ed438] rounded-[0rem] py-10 px-4">
               <div className=" main-heading2 headin-color2 text-center py-4">
                 What we believe in
               </div>
-              <div className="subtitle text-center mx-auto max-w-3xl mt-2">
+              <div className="subtitle text-center mx-auto max-w-3xl md:mt-2">
                 We believe in the power of a small group of thoughtful,
                 committed, and smart individuals aspiring to change the world.
               </div>
               <div className="flex justify-center py-6">
-                <div className="flex flex-row flex-wrap w-full gap-20 items-center mt-10 w-fit">
+                <div className="flex flex-row flex-wrap w-full gap-20 items-center justify-center md:justify-start mt-10 w-fit">
                   <div className="relative flex items-center justify-center ">
                     <Image
                       className="w-60 md:w-72 h-full "
@@ -181,7 +207,7 @@ const Careers = () => {
                     <div className="image_background_gradient z-9"></div>
                   </div>
                   <div className="flex flex-col gap-5">
-                    <div className="subtitle max-w-xl font-noto">
+                    <div className="subtitle max-w-xl font-noto text-center md:text-start">
                       A crew of creators from varying backgrounds and points of
                       view are reimagining and reinventing the existing
                       complexities of Global e-commerce with a view to offering
@@ -196,7 +222,7 @@ const Careers = () => {
                 </div>
               </div>
               <div className="flex flex-col gap-5 justify-center items-center">
-                <div className="subtitle2 text-center max-w-5xl mt-10">
+                <div className="subtitle2 text-center max-w-5xl mt-10 font-medium md:font-normal">
                   Here’s calling out to all the darers, dreamers and doors out
                   there – together we will accomplish the unimagined.
                 </div>
@@ -210,10 +236,11 @@ const Careers = () => {
             </div>
 
             {/* rocket */}
-            <div className=" main-heading2 headin-color2 text-center py-4 pt-32">
+            <div className=" main-heading2 headin-color2 text-center py-4 pt-10 md:pt-32">
               Life @ goGLOCAL
             </div>
-            <div className="h-[600px] flex flex-row items-center justify-center gap-2">
+            {/* rocket-info -- desktop */}
+            <div className="hidden md:flex h-[600px] flex-row items-center justify-center gap-2">
               <div className="grid grid-cols-[1fr_0.5fr] gap-y-2 gap-x-5">
                 {rocketData.map((p, idx) => {
                   return (
@@ -255,13 +282,77 @@ const Careers = () => {
                 />
               </div>
             </div>
+            {/* rocket-info -- modile */}
+            <div className="md:hidden h-[500px] flex flex-row items-center justify-center gap-2">
+              <div className="grid grid-cols-[1fr] gap-y-2 gap-x-5">
+                {rocketData.map((p, idx) => {
+                  return (
+                    <>
+                      <div className="h-16 w-full flex flex-row items-center justify-end mx-auto gap-0">
+                        <div className=" relative h-20 w-20 relative">
+                          <Image
+                            className="h-full w-full object-contain"
+                            src={`${data.imageBasePath}${p.img}`}
+                            alt="hero image"
+                            width="1000"
+                            height="1000"
+                            loading="lazy"
+                            // objectFit="cover"
+                          />
+                        </div>
+                        <div className="h-[2px] w-[60%] bg-[#BA68C8]"></div>
+                        <div className="h-[4px] w-[4px] rounded-full bg-[#BA68C8]"></div>
+                      </div>
+                    </>
+                  );
+                })}
+              </div>
+              <div className="h-full relative">
+                <Image
+                  className="h-full w-auto object-contain z-[1000000]"
+                  src={`${data.imageBasePath}rocket2.svg`}
+                  alt="hero image"
+                  width="1000"
+                  height="1000"
+                  loading="lazy"
+                  // objectFit="cover"
+                />
+              </div>
+            </div>
+            <div className="md:hidden grid grid-cols-[0.3fr_1fr] gap-y-8 gap-x-5 mt-10 px-2">
+              {rocketData.map((p, idx) => {
+                return (
+                  <>
+                    <div className="h-16 w-full flex flex-row items-center justify-end mx-auto gap-0">
+                      <div className=" relative h-16 w-16 ">
+                        <Image
+                          className="h-full w-full object-contain"
+                          src={`${data.imageBasePath}${p.img}`}
+                          alt="hero image"
+                          width="1000"
+                          height="1000"
+                          loading="lazy"
+                          // objectFit="cover"
+                        />
+                      </div>
+                    </div>
+                    <motion.div
+                      className="medium-text w-full text-start my-auto"
+                      key={idx}
+                    >
+                      {p.title}
+                    </motion.div>
+                  </>
+                );
+              })}
+            </div>
 
             {/* values */}
-            <div className=" main-heading2 headin-color2 text-center py-4 pt-32">
+            <div className=" main-heading2 headin-color2 text-center py-4 pt-16 md:pt-32">
               Values we value
             </div>
             <div className="flex flex-row items-center justify-center gap-2 mt-10 pb-5">
-              <div className="max-w-6xl flex flex-row flex-wrap justify-center gap-y-12 gap-x-10">
+              <div className="max-w-6xl flex flex-row flex-wrap justify-center gap-y-12 gap-x-5 md:gap-x-10">
                 {[
                   "Judgement",
                   "Performance",
@@ -327,7 +418,7 @@ const Careers = () => {
               >
                 Click here
               </button>
-              <div className="max-w-6xl flex flex-row flex-wrap justify-center gap-y-12 gap-x-10 mt-5">
+              <div className="max-w-6xl flex flex-row flex-wrap justify-center gap-y-8 md:gap-y-12 gap-x-5 md:gap-x-10 mt-5">
                 {["Business", "Performance", "Logistics", "Technology"].map(
                   (d, idx) => {
                     return <CareerButton2 text={d} key={idx} />;
@@ -350,7 +441,7 @@ const Careers = () => {
                   {selection_data.map((d, idx) => {
                     return (
                       <div
-                        className="w-full max-w-[600px] h-auto grid grid-cols-[1fr_0.7fr] gap-5 justify-center p-5 bg-[#ffffff] dark:bg-[#ac2eed29] shadow-lg rounded-lg"
+                        className="w-full max-w-[550px] h-auto grid grid-cols-[1fr_0.7fr] gap-5 justify-center p-5 bg-[#ffffff] dark:bg-[#ac2eed29] shadow-lg rounded-lg"
                         key={idx}
                       >
                         <div className="flex flex-col gap-3">

@@ -57,6 +57,7 @@ export default function Index() {
       </Link>
     );
   };
+
   return (
     <>
       <main className="bg-light dark:bg-dark overflow-x-hidden">
@@ -68,8 +69,8 @@ export default function Index() {
         <div className="page-bg bg-[#AC2EED29] z-[10] static">
           <div className="page-container main ">
             {/* Hero Section */}
-            <div className="flex flex-col gap-[20px] items-center justify-center px-5 py-10 pt-32">
-              <div className="main-heading heading-color2 text-justify md:text-center mx-auto  ">
+            <div className="flex flex-col gap-2 md:gap-[20px] items-center justify-center px-5 py-10 pt-10 md:pt-32">
+              <div className="main-heading2 heading-color2 text-center md:text-center mx-auto leading-[40px] ">
                 {data.title}
               </div>
               <div>
@@ -79,17 +80,17 @@ export default function Index() {
               </div>
             </div>
 
-            <div className="flex justify-center py-6">
-              <div className="flex flex-row flex-wrap w-full gap-16 items-center mt-10 w-fit">
+            <div className="hidden md:flex justify-center py-6">
+              <div className="flex flex-row flex-wrap w-full gap-16 items-center justify-center md:justify-auto mt-5 md:mt-10 w-fit px-5">
                 <div className="flex flex-col gap-5">
-                  <div className="heading-2 heading-color2  max-w-2xl">
+                  <div className="heading-2 heading-color2 max-w-xl text-center md:text-start">
                     {data.heroQues}
                   </div>
-                  <div className="subtitle max-w-lg font-noto">
+                  <div className="subtitle max-w-lg font-noto text-center md:text-start">
                     {data.description}
                   </div>
                 </div>
-                <div className="relative flex items-center justify-center ">
+                <div className="relative flex items-center justify-center relative">
                   <Image
                     className="w-60 md:w-96 h-full z-10"
                     src={`${data.imageBasePath}${data.image}`}
@@ -103,17 +104,41 @@ export default function Index() {
                 </div>
               </div>
             </div>
+            <div className="flex  md:hidden justify-center py-0">
+              <div className="flex flex-row flex-wrap w-full gap-16 items-center justify-center md:justify-auto mt-5 md:mt-10 w-fit px-5">
+                <div className="flex flex-col gap-10">
+                  <div className="heading-2 heading-color2 max-w-xl text-center md:text-start">
+                    {data.heroQues}
+                  </div>
+                  <div className="relative flex items-center justify-center relative">
+                    <Image
+                      className="w-60 md:w-96 h-full z-10"
+                      src={`${data.imageBasePath}${data.image}`}
+                      alt="hero image"
+                      loading="lazy"
+                      width="200"
+                      height="400"
+                      // objectFit="cover"
+                    />
+                    <div className="image_background_gradient2 z-9"></div>
+                  </div>
+                  <div className="subtitle max-w-lg font-noto text-center md:text-start">
+                    {data.description}
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div>
-              <div className="body-intro-text text-[#463C4B] text-justify md:text-center mx-auto mt-20">
+              <div className="body-intro-text text-[#463C4B] text-center md:text-center mx-auto mt-20">
                 {data.serviceTitle}
               </div>{" "}
-              <div className="heading-3 heading-color2 text-justify md:text-center mx-auto  ">
+              <div className="heading-3 heading-color2 text-center md:text-center mx-auto  ">
                 {data.serviceTitleBold}
               </div>
             </div>
             <div className="flex flex-col justify-center items-center">
-              <div className="flex flex-row gap-16 pt-20 px-4 items-start">
+              <div className="flex flex-col md:flex-row gap-16 pt-20 px-4 items-start">
                 {data.list.map((item, index) => (
                   <div
                     className="flex flex-col items-center gap-4 px-4"
@@ -133,7 +158,7 @@ export default function Index() {
                     <div className="heading-4 heading-color2 font-semibold uppercase">
                       {item.title}
                     </div>
-                    <div className="subtitle max-w-md text-center">
+                    <div className="subtitle max-w-xs text-center">
                       {item.description}
                     </div>
                   </div>

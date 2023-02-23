@@ -91,8 +91,8 @@ export default function Index() {
         <div className="page-bg bg-[#AC2EED29] z-[10] static">
           <div className="page-container main ">
             {/* Hero Section */}
-            <div className="flex flex-col gap-[20px] items-center justify-center px-5 py-10 pt-20">
-              <div className="main-heading headingColor2 text-justify md:text-center  max-w-lg mx-auto  ">
+            <div className="flex flex-col gap-[10px] md:gap-[20px] items-center justify-center px-5 py-10 pt-20">
+              <div className="main-heading headingColor2 text-center  max-w-lg mx-auto  ">
                 {data.title}
               </div>
               <div>
@@ -102,9 +102,9 @@ export default function Index() {
               </div>
             </div>
             <div className="flex flex-row flex-wrap w-full gap-8 items-center justify-center mt-10">
-              <div className="w-full md:w-fit flex items-center justify-center">
+              <div className="w-full md:w-fit flex items-center justify-center relative">
                 <Image
-                  className="w-60 md:w-80 h-full "
+                  className="w-60 md:w-80 h-full z-[100000]"
                   src={`${data.imageBasePath}p2_001.png`}
                   alt="hero image"
                   loading="lazy"
@@ -112,14 +112,15 @@ export default function Index() {
                   height="400"
                   // objectFit="cover"
                 />
+                <div className="image_background_gradient"></div>
               </div>
               <div className="w-full max-w-lg">
-                <div className="headingColor w-full text-left font-body body-2 font-noto">
+                <div className="px-2 headingColor body-main-text w-full text-center md:text-left text-left font-noto ">
                   {data.cta}
                 </div>
               </div>
             </div>
-            <div className=" mx-auto flex items-center flex-row pt-6 gap-2 xl:gap-8 flex-wrap justify-center mt-10">
+            <div className=" mx-auto flex items-center flex-col md:flex-row pt-6 gap-2 xl:gap-8 flex-wrap justify-center mt-10">
               <div className="shadow-lg min-h-[150px]  md:min-h-[260px]  w-full max-w-[320px] medium-text  product_box2 box_drop_shadow text-center bg-white h-full py-8 md:py-12 px-6 rounded-2xl">
                 The check-in solution enables local language content, assets and
                 customer support using geolocation, translation, pricing tool,
@@ -144,16 +145,17 @@ export default function Index() {
             </div>
 
             {/* Section 2 */}
-            <div className="main-heading2 headingColor2 text-justify md:text-center  max-w-6xl mx-auto pt-36 ">
-              Global Check-In & Check-out Features
+            {/* Section 2 */}
+            <div className="hidden md:block main-heading2 headingColor2 text-justify md:text-center  max-w-6xl mx-auto pt-36 ">
+              Glocal Check-in & Check-out Features
             </div>
             <div className="flex justify-center">
-              <div className="flex flex-row flex-wrap gap-8 justify-center py-10 max-w-[1500px]">
+              <div className="hidden md:flex flex-row flex-wrap gap-8 justify-center py-10 max-w-[1500px]">
                 {data.features.map((feat, idx) => {
                   return (
                     <div
                       key={`product_${idx}`}
-                      className="flex flex-col shadow-xl items-center justify-start w-[80%] max-w-[360px] min-h-[500px] px-5 py-10 pr_rad_grad rounded-[2rem]"
+                      className="flex flex-col items-center justify-start w-[80%] max-w-[360px] min-h-[500px] px-5 py-10 pr_rad_grad shadow-lg rounded-[2rem]"
                     >
                       <div className="w-full">
                         <div className="w-60 h-60 my-5 flex items-center justify-center mx-auto relative">
@@ -198,6 +200,62 @@ export default function Index() {
                     </div>
                   );
                 })}
+              </div>
+              <div className="block md:hidden main-light-background mt-10">
+                <div className="main-heading2 headingColor2 text-center w-full max-w-6xl mx-auto pt-10 leading-[40px]">
+                  Glocal Check-in & Check-out Features
+                </div>
+                <div className="  flex flex-row flex-wrap gap-4 justify-center max-w-[1500px] ">
+                  {data.features.map((feat, idx) => {
+                    return (
+                      <div
+                        key={`product_${idx}`}
+                        className="flex flex-col items-center justify-start w-[90%] max-w-[360px] px-5 py-5 rounded-[2rem]"
+                      >
+                        <div className="heading-4 leading-snug heading-color2 text-center mt-5 h-auto">
+                          {feat.name}
+                        </div>
+                        <div className="w-full">
+                          <div className="w-60 h-60 my-4 flex items-center justify-center mx-auto relative">
+                            <div className="w-full h-full rounded-full border-[0.5px] border-[#7300AB61] dark:border-[#E21D6438] flex items-center justify-center">
+                              <div className="w-[95%] h-[95%] rounded-full border-[2px] border-[#7300AB61] dark:border-[#E21D6438] flex items-center justify-center">
+                                <div className="w-[95%] h-[95%] rounded-full border-[4px] border-[#7300AB61] dark:border-[#E21D6438]">
+                                  <Image
+                                    className="w-full h-full object-contain"
+                                    src={`${data.imageBasePath}/${feat.img}`}
+                                    alt="hero image"
+                                    loading="lazy"
+                                    width="200"
+                                    height="400"
+                                    // objectFit="cover"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div className="image_background_gradient3"></div>
+                          </div>
+                        </div>
+                        <div className="flex flex-col gap-3 justify-center items-center mt-5 w-[90%]">
+                          {feat.fields.map((field, f_idx) => {
+                            return field.link ? (
+                              <div
+                                key={`field_${idx}`}
+                                className="w-full bg-gradient-to-r from-[#551F5F] to-[#AB5288] dark:bg-[#00000030] caption-text text-[#ffffff] rounded-2xl px-4 py-3 text-center font-medium cursor-pointer"
+                                onClick={() => router.push(field.link)}
+                              >
+                                {field.title}
+                              </div>
+                            ) : (
+                              <div className="w-full bg-gradient-to-r from-[#551F5F] to-[#AB5288] dark:bg-[#00000030] caption-text text-[#ffffff] rounded-2xl px-4 py-3 text-center font-medium">
+                                {field.title}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
             {/* Footers */}

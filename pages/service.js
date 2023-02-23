@@ -102,7 +102,7 @@ export default function Home() {
         <div className="page-bg bg-[#AC2EED29] z-[10] static z-[1]">
           <div className="page-container main ">
             {/* Hero Section */}
-            <div className="py-5 md:py-20 px-5">
+            <div className="pt-10 md:py-20 px-5">
               <motion.h1
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -137,7 +137,7 @@ export default function Home() {
               className="w-full h-full  mx-center justify-center items-center"
             >
               <Image
-                className="h-80 mx-auto object-contain"
+                className="md:h-80 mx-auto object-contain"
                 src={`${data.imageBasePath}india.svg`}
                 alt="hero1 image"
                 loading="lazy"
@@ -149,8 +149,9 @@ export default function Home() {
 
             {/* Section 2 */}
             <div className=" px-5 md:px-10 main-light-background dark:bg-[#880ed438] pt-10 md:pt-40 ">
-              <div className="flex grid-2x2 items-around -mt-32 px-4 gap-4 h-96">
-                <div className=" h-full md:w-2/4 max-w-md relative">
+              {/* 1---desktop */}
+              <div className="hidden md:flex grid-2x2 items-around md:-mt-32 px-2 md:px-4 gap-4 md:h-96">
+                <div className="h-full md:w-2/4 max-w-md relative">
                   <Image
                     className=" p-8 md:p-8 h-full object-contain "
                     src={`${data.imageBasePath}${data.cta[0].image}`}
@@ -166,12 +167,37 @@ export default function Home() {
                   <h1 className="text-center md:text-left heading-4 heading-color2">
                     {data.cta[0].title}
                   </h1>
-                  <h2 className="text-start md subtitle heading-color2 font-noto">
+                  <h2 className="text-center md:text-start md subtitle heading-color2 font-noto">
                     {data.cta[0].subtitle}
                   </h2>
                 </div>
               </div>
-              <div className="flex flex-row gap-4 items-center justify-center gap-8 py-4 pt-20 ">
+              {/* 1--mobile */}
+              <div className="flex md:hidden grid-2x2 items-around md:-mt-32 px-2 md:px-4 gap-4 md:h-96">
+                <div className="w-full md:w-2/4 flex flex-col items-start justify-start gap-6 max-w-xl">
+                  <h1 className="text-center md:text-left heading-4 heading-color2">
+                    {data.cta[0].title}
+                  </h1>
+                  <div className="h-full md:w-2/4 max-w-md relative">
+                    <Image
+                      className=" p-8 md:p-8 h-full object-contain "
+                      src={`${data.imageBasePath}${data.cta[0].image}`}
+                      alt="hero image"
+                      loading="lazy"
+                      width="500"
+                      height="500"
+                      // objectFit="cover"
+                    />
+                    <div className="image_background_gradient" />
+                  </div>
+                  <h2 className="text-center md:text-start md subtitle heading-color2 font-noto">
+                    {data.cta[0].subtitle}
+                  </h2>
+                </div>
+              </div>
+
+              {/* 2 -- desktop */}
+              <div className="hidden md:flex flex-row gap-4 items-center justify-center gap-8 py-4 pt-20 ">
                 <div className="w-full md:w-2/4 flex flex-col items-start justify-start gap-6 max-w-xl">
                   <h1 className="text-center md:text-left heading-4 heading-color2">
                     {data.cta[1].title}
@@ -193,7 +219,32 @@ export default function Home() {
                   <div className="image_background_gradient" />
                 </div>
               </div>
-              <div className="flex grid-2x2 items-around py-4 pt-20 gap-4 h-[30rem]">
+              {/* 2 -- mobile */}
+              <div className="flex md:hidden flex-col gap-4 items-center justify-center gap-8 py-4 pt-20 ">
+                <div className="w-full md:w-2/4 flex flex-col items-start justify-start gap-6 max-w-xl">
+                  <h1 className="text-center md:text-left heading-4 heading-color2">
+                    {data.cta[1].title}
+                  </h1>
+                  <div className="h-full md:w-2/4 max-w-md relative">
+                    <Image
+                      className="p-8 md:p-8 h-full object-contain "
+                      src={`${data.imageBasePath}${data.cta[1].image}`}
+                      alt="hero image"
+                      loading="lazy"
+                      width="700"
+                      height="700"
+                      objectFit="contain"
+                    />
+                    <div className="image_background_gradient" />
+                  </div>
+                  <h2 className="text-center md:text-left subtitle heading-color2 font-noto">
+                    {data.cta[1].subtitle}
+                  </h2>
+                </div>
+              </div>
+
+              {/* 3 -- desktop */}
+              <div className="hidden md:flex grid-2x2 items-around py-4 pt-20 gap-4 h-[30rem]">
                 <div className=" h-full md:w-2/4 max-w-md relative">
                   <Image
                     className=" p-8 md:p-8 h-full object-contain "
@@ -215,10 +266,33 @@ export default function Home() {
                   </h2>
                 </div>
               </div>
+              {/* 3 -- mobile */}
+              <div className="flex md:hidden grid-2x2 items-around py-4 pt-20 gap-4">
+                <div className="w-full md:w-2/4 flex flex-col items-start justify-start gap-6 max-w-xl">
+                  <h1 className="text-center md:text-left heading-4 heading-color2">
+                    {data.cta[2].title}
+                  </h1>
+                  <div className=" h-full md:w-2/4 max-w-md relative">
+                    <Image
+                      className=" p-8 md:p-8 h-full object-contain "
+                      src={`${data.imageBasePath}${data.cta[2].image}`}
+                      alt="hero image"
+                      loading="lazy"
+                      width="500"
+                      height="500"
+                      // objectFit="cover"
+                    />
+                    <div className="image_background_gradient" />
+                  </div>
+                  <h2 className="text-start md subtitle heading-color2 font-noto">
+                    {data.cta[2].subtitle}
+                  </h2>
+                </div>
+              </div>
             </div>
 
-            <div className=" px-8 md:px-10  pt-16 md:pt-20 ">
-              <div className="main-heading2 heading-color2 text-center mx-auto max-w-xl py-1 md:py-2">
+            <div className=" px-8 md:px-10  pt-10 md:pt-20 ">
+              <div className="leading-[50px] md:leading-auto main-heading2 heading-color2 text-center mx-auto max-w-xl py-1 md:py-2">
                 {data.features.title}
               </div>
               <div className="subtitle  headingColor text-center mx-auto max-w-3xl py-1 md:py-2">

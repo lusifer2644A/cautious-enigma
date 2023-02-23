@@ -221,7 +221,7 @@ export default function Home() {
               </div>
             </div>
             {/* vision and mission */}
-            <div className="w-full min-h-[30rem] flex flex-col md:flex-row justify-center main-light-background dark:bg-[#880ed438] text-gray-50 overflow-y-hidden items-center gap-4 md:gap-32 lg:gap-56 xl:gap-72 px-5 py-10 lg:px-20 lg:py-10">
+            <div className="w-full min-h-[30rem] flex flex-col md:flex-row justify-center main-light-background dark:bg-[#880ed438] overflow-x-hidden text-gray-50 overflow-y-hidden items-center gap-4 md:gap-32 lg:gap-56 xl:gap-72 px-5 py-10 lg:px-20 lg:py-10">
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -241,7 +241,7 @@ export default function Home() {
 
                 <div className="image_background_gradient"></div>
               </motion.div>
-              <div className="flex flex-col gap-7 max-w-[400px] justify-self-center">
+              <div className="flex flex-col gap-7 max-w-[400px] justify-self-center ">
                 <div>
                   <motion.h2
                     initial={{ opacity: 0, y: 100 }}
@@ -431,7 +431,7 @@ export default function Home() {
               <div className="flex flex-row flex-wrap gap-4 justify-center items-center py-8 sm:px-2 w-full">
                 {data.integrations.list.map((item, index) => (
                   <div
-                    class="flex flex-col  sm:flex-row gap-x-8 gap-y-5 bg-[#ffffff] dark:bg-[#ac2eed29] w-fit shadow-lg rounded-xl px-6 py-8 h-full"
+                    class="flex flex-col  sm:flex-row gap-x-8 gap-y-5 bg-[#ffffff] dark:bg-[#ac2eed29] w-fit shadow-lg rounded-xl px-6 py-8 h-full min-h-[320px]"
                     key={index}
                   >
                     <div class="dark:hidden flex justify-center">
