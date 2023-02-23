@@ -161,17 +161,17 @@ export default function Home() {
     <>
       <Head>
         <title>Goglocal</title>
-        <meta name="description" content="Goglocal site" />
+        <meta name="description" content="Goglocal" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-light dark:bg-dark overflow-x-hidden">
+      <main className="bg-light dark:bg-dark">
         {/* Header */}
 
         <Header />
         <div className="absolute top-0 left-0 white-rad-grad md:w-[3000px] md:h-[1200px] -translate-x-1/2 -translate-y-1/2 z-[1]"></div>
 
-        <div className="page-bg z-[10] static">
+        <div className="page-bg z-[10]">
           <div className="page-container main ">
             {/* Hero Section */}
             <div className="w-full md:h-[50rem] overflow-y-hidden flex flex-col md:flex-row justify-center items-start gap-5 md:gap-10 xl:gap-24 px-5 py-5 md:px-5 md:py-5 lg:px-20 lg:py-10">
@@ -200,14 +200,16 @@ export default function Home() {
                 >
                   <button
                     className="btn-primary"
-                    onClick={() => router.push("/connect/seller")}
+                    onClick={() => {
+                      router.push("/connect/seller");
+                    }}
                   >
                     Get Started
                   </button>
                 </motion.div>
               </div>
               <div className="w-fit h-full max-h-full justify-self-end">
-                <div className="w-full h-full max-h-full flex items-center justify-center mx-auto  ">
+                <div className="w-full h-full max-h-full flex items-center justify-center mx-auto relative ">
                   <Image
                     className="w-fit h-full object-contain z-10 max-h-full"
                     src={`${data.hero.image}`}

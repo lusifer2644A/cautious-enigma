@@ -111,7 +111,7 @@ const Careers = () => {
     <>
       <Head>
         <title>Goglocal</title>
-        <meta name="description" content="Goglocal site" />
+        <meta name="description" content="Goglocal" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

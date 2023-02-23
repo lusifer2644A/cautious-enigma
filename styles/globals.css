@@ -187,11 +187,11 @@
   }
 
   .image_background_gradient {
-    @apply block main-grad dark:main-grad-dark absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-100 w-100 rounded-full;
+    @apply block main-grad dark:main-grad-dark absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full w-full rounded-full;
   }
 
   .image_background_gradient2 {
-    @apply main-grad2 dark:main-grad2-dark absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-100 w-100 rounded-full;
+    @apply main-grad2 dark:main-grad2-dark absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full w-full rounded-full;
   }
 
   .btn-primary {
