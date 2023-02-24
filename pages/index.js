@@ -169,7 +169,7 @@ export default function Home() {
         {/* Header */}
 
         <Header />
-        <div className="absolute top-0 left-0 white-rad-grad md:w-[3000px] md:h-[1200px] -translate-x-1/2 -translate-y-1/2 z-[1]"></div>
+        {/* <div className="absolute top-0 left-0 white-rad-grad md:w-[3000px] md:h-[1200px] -translate-x-1/2 -translate-y-1/2 z-[1]"></div> */}
 
         <div className="page-bg z-[10]">
           <div className="page-container main ">
